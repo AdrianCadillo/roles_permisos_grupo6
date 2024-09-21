@@ -1,0 +1,182 @@
+{
+    "packages": [
+        {
+            "name": "bramus/router",
+            "version": "1.6.1",
+            "version_normalized": "1.6.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/bramus/router.git",
+                "reference": "55657b76da8a0a509250fb55b9dd24e1aa237eba"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/bramus/router/zipball/55657b76da8a0a509250fb55b9dd24e1aa237eba",
+                "reference": "55657b76da8a0a509250fb55b9dd24e1aa237eba",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "~2.14",
+                "phpunit/php-code-coverage": "~2.0",
+                "phpunit/phpunit": "~4.8"
+            },
+            "time": "2021-11-18T19:24:07+00:00",
+            "type": "library",
+            "installation-source": "dist",
+            "autoload": {
+                "psr-0": {
+                    "Bramus": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Bram(us) Van Damme",
+                    "email": "bramus@bram.us",
+                    "homepage": "http://www.bram.us"
+                }
+            ],
+            "description": "A lightweight and simple object oriented PHP Router",
+            "homepage": "https://github.com/bramus/router",
+            "keywords": [
+                "router",
+                "routing"
+            ],
+            "support": {
+                "issues": "https://github.com/bramus/router/issues",
+                "source": "https://github.com/bramus/router/tree/1.6.1"
+            },
+            "install-path": "../bramus/router"
+        },
+        {
+            "name": "windwalker/edge",
+            "version": "4.0.0",
+            "version_normalized": "4.0.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ventoviro/windwalker-edge.git",
+                "reference": "2ce5b41c71990c35b34c8830ccb3996499e0e45f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ventoviro/windwalker-edge/zipball/2ce5b41c71990c35b34c8830ccb3996499e0e45f",
+                "reference": "2ce5b41c71990c35b34c8830ccb3996499e0e45f",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.0.0",
+                "windwalker/utilities": "^4.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^8.0||^9.0||^10.0",
+                "windwalker/dom": "^4.0",
+                "windwalker/test": "^4.0"
+            },
+            "time": "2021-08-13T17:05:47+00:00",
+            "type": "windwalker-package",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "4.x-dev"
+                }
+            },
+            "installation-source": "dist",
+            "autoload": {
+                "files": [
+                    "src/bootstrap.php"
+                ],
+                "psr-4": {
+                    "Windwalker\\Edge\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Windwalker Edge package",
+            "homepage": "https://github.com/ventoviro/windwalker-edge",
+            "keywords": [
+                "blade",
+                "edge",
+                "framework",
+                "template",
+                "windwalker"
+            ],
+            "support": {
+                "issues": "https://github.com/ventoviro/windwalker-edge/issues",
+                "source": "https://github.com/ventoviro/windwalker-edge/tree/4.0.0"
+            },
+            "install-path": "../windwalker/edge"
+        },
+        {
+            "name": "windwalker/utilities",
+            "version": "4.1.5",
+            "version_normalized": "4.1.5.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/windwalker-io/utilities.git",
+                "reference": "84ca3d94e4e40f90987255946716268918e0aa79"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/windwalker-io/utilities/zipball/84ca3d94e4e40f90987255946716268918e0aa79",
+                "reference": "84ca3d94e4e40f90987255946716268918e0aa79",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.2.0"
+            },
+            "require-dev": {
+                "myclabs/php-enum": "^1.8",
+                "phpunit/phpunit": "^8.0||^9.0||^10.0",
+                "symfony/options-resolver": "^5.0||^6.0||^7.0",
+                "symfony/string": "^5.2||^6.0||^7.0",
+                "windwalker/attributes": "^4.0",
+                "windwalker/scalars": "^4.0",
+                "windwalker/test": "^4.0"
+            },
+            "suggest": {
+                "laravel/serializable-closure": "Install ^1.0 to support serializable Closure.",
+                "symfony/string": "Install to use inflector."
+            },
+            "time": "2024-09-17T10:04:44+00:00",
+            "type": "windwalker-package",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "4.x-dev"
+                }
+            },
+            "installation-source": "dist",
+            "autoload": {
+                "files": [
+                    "src/bootstrap.php"
+                ],
+                "psr-4": {
+                    "Windwalker\\Utilities\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Windwalker Utilities package",
+            "homepage": "https://github.com/windwalker-io/utilities",
+            "keywords": [
+                "framework",
+                "utilities",
+                "windwalker"
+            ],
+            "support": {
+                "source": "https://github.com/windwalker-io/utilities/tree/4.1.5"
+            },
+            "install-path": "../windwalker/utilities"
+        }
+    ],
+    "dev": true,
+    "dev-package-names": []
+}
