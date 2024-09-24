@@ -11,3 +11,7 @@ $router->post("/users/send",'UserController@store');
 $router->get("/user/create",function(){
     echo "CREANDO USUARIOS!"; 
 });
+
+$router->get("/prueba",function(){
+  View("layouts.app");
+});

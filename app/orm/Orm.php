@@ -33,4 +33,31 @@ interface Orm{
      */
     public function Or(string $columna,string $operador,mixed $value);
 
+
+    /**
+     * Método save para registrar
+     */
+    public function save();
+
+    /**
+     * Método para registrar de otra forma
+     */
+    public function create(array $datos=[]);
+
+    /**
+     * Método para actualizar datos
+     */
+    public function update(array $datos);
+
+    /**
+     * Para eliminar
+     */
+    public function delete($id);
+
+
+    /**
+     * Método Join para consultas de dos oh más tablas
+     */
+    public function Join(string $TablaFk,string $columnaPk,string $operador,string $columnaFK);
+
 }

@@ -21,3 +21,11 @@ use Windwalker\Edge\Loader\EdgeFileLoader;
         echo "Error 404";
     }
  }
+
+ /**
+  * Método asset
+  */
+
+  function assets(){
+    
+  }
