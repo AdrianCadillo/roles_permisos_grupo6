@@ -3,7 +3,7 @@ namespace app\Http\lib;
 
 class Controller 
 { 
-    use Request;
+    use Request,Csrf;
     /**
      * 
      */

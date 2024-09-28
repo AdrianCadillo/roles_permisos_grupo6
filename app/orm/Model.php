@@ -222,6 +222,38 @@ class Model extends Conexion implements Orm
     private function getNameClass(){
        return  strtolower(explode("\\",get_class($this))[2])."s";
     }
+/// procedimiento almacenado para realizar [CRUD COMPLETO]
+public function procedure(string $NameProcedure,$evento,array $datos=[])
+{
+  $this->Query = "CALL $NameProcedure(";
 
+  foreach($datos as $value)
+  {
+     $this->Query.="?,";
+  }
+
+  $this->Query = rtrim($this->Query,",").")";
+
+  try {
+     $this->pps = $this->getConectionDatabase()->prepare($this->Query);
+
+     for ($i=0; $i <count($datos) ; $i++) { 
+        
+        $this->pps->bindValue(($i+1),$datos[$i]);
+     }
+     if(strtoupper($evento) ==='C')
+     {
+        $this->pps->execute();
+
+        return $this->pps->fetchAll(\PDO::FETCH_OBJ);
+     }
+
+     return $this->pps->execute();
+
+  } catch (\Throwable $th) {
+     echo $th->getMessage();
+     exit;
+  }finally{$this->closeConection();}
+}
    
 }

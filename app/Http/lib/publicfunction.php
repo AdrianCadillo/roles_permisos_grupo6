@@ -26,6 +26,26 @@ use Windwalker\Edge\Loader\EdgeFileLoader;
   * Método asset
   */
 
-  function assets(){
+  function assets(string $recursos){
     
+    return URL_BASE.DIRECTORIO_RECURSOS.$recursos;
+  }
+
+  function env(string $NameVariableEntorno,mixed $ValueVariableDefault= null){
+     if(isset($_ENV[$NameVariableEntorno])):
+         return $_ENV[$NameVariableEntorno];
+     endif;
+
+     return $ValueVariableDefault;
+  }
+
+  /**
+   * Método route
+ */
+  function route(string $endPoint){
+      return URL_BASE.$endPoint;
+  }
+
+  function layouts(string $layout){
+     return "../".str_replace(".","/",DIRECTORIO_LAYOUTS.$layout).".blade.php";
   }

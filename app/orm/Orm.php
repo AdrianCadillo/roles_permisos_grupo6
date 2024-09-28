@@ -60,4 +60,6 @@ interface Orm{
      */
     public function Join(string $TablaFk,string $columnaPk,string $operador,string $columnaFK);
 
+
+    public function procedure(string $NameProcedure,$evento,array $datos=[]);
 }

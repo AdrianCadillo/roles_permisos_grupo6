@@ -2,16 +2,18 @@
 
 use Bramus\Router\Router;
 
+if(PHP_SESSION_ACTIVE != session_status()){
+  session_start();  
+}
+
 $router = new Router;
 
 $router->get("/users",'UserController@index');
 
-$router->post("/users/send",'UserController@store');
+$router->post("/user/store",'UserController@store');
 
-$router->get("/user/create",function(){
-    echo "CREANDO USUARIOS!"; 
-});
+$router->get("/user/create",'UserController@create');
 
-$router->get("/prueba",function(){
-  View("layouts.app");
+$router->get("/",function(){
+  echo "LA PÁGINA DE INCIO";
 });

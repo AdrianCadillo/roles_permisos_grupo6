@@ -1,0 +1,131 @@
+[28-Sep-2024 03:26:04 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method app\Http\controllers\UserController::VerifyTokenCsrf() in C:\xampp3\htdocs\roles_permisos\app\Http\controllers\UserController.php:30
+Stack trace:
+#0 [internal function]: app\Http\controllers\UserController->store()
+#1 C:\xampp3\htdocs\roles_permisos\vendor\bramus\router\src\Bramus\Router\Router.php(482): call_user_func_array(Array, Array)
+#2 C:\xampp3\htdocs\roles_permisos\vendor\bramus\router\src\Bramus\Router\Router.php(440): Bramus\Router\Router->invoke('UserController@...', Array)
+#3 C:\xampp3\htdocs\roles_permisos\vendor\bramus\router\src\Bramus\Router\Router.php(287): Bramus\Router\Router->handle(Array, true)
+#4 C:\xampp3\htdocs\roles_permisos\public\index.php(19): Bramus\Router\Router->run()
+#5 {main}
+  thrown in C:\xampp3\htdocs\roles_permisos\app\Http\controllers\UserController.php on line 30
+[28-Sep-2024 03:26:13 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method app\Http\controllers\UserController::VerifyTokenCsrf() in C:\xampp3\htdocs\roles_permisos\app\Http\controllers\UserController.php:30
+Stack trace:
+#0 [internal function]: app\Http\controllers\UserController->store()
+#1 C:\xampp3\htdocs\roles_permisos\vendor\bramus\router\src\Bramus\Router\Router.php(482): call_user_func_array(Array, Array)
+#2 C:\xampp3\htdocs\roles_permisos\vendor\bramus\router\src\Bramus\Router\Router.php(440): Bramus\Router\Router->invoke('UserController@...', Array)
+#3 C:\xampp3\htdocs\roles_permisos\vendor\bramus\router\src\Bramus\Router\Router.php(287): Bramus\Router\Router->handle(Array, true)
+#4 C:\xampp3\htdocs\roles_permisos\public\index.php(19): Bramus\Router\Router->run()
+#5 {main}
+  thrown in C:\xampp3\htdocs\roles_permisos\app\Http\controllers\UserController.php on line 30
+[28-Sep-2024 04:06:11 Europe/Berlin] PHP Fatal error:  Uncaught Error: Access to undeclared static property app\orm\Model::$Query in C:\xampp3\htdocs\roles_permisos\app\orm\Model.php:235
+Stack trace:
+#0 C:\xampp3\htdocs\roles_permisos\app\Http\controllers\UserController.php(23): app\orm\Model->procedure('proc_users', 'c', Array)
+#1 [internal function]: app\Http\controllers\UserController->create()
+#2 C:\xampp3\htdocs\roles_permisos\vendor\bramus\router\src\Bramus\Router\Router.php(482): call_user_func_array(Array, Array)
+#3 C:\xampp3\htdocs\roles_permisos\vendor\bramus\router\src\Bramus\Router\Router.php(440): Bramus\Router\Router->invoke('UserController@...', Array)
+#4 C:\xampp3\htdocs\roles_permisos\vendor\bramus\router\src\Bramus\Router\Router.php(287): Bramus\Router\Router->handle(Array, true)
+#5 C:\xampp3\htdocs\roles_permisos\public\index.php(19): Bramus\Router\Router->run()
+#6 {main}
+  thrown in C:\xampp3\htdocs\roles_permisos\app\orm\Model.php on line 235
+[28-Sep-2024 04:06:21 Europe/Berlin] PHP Fatal error:  Uncaught Error: Access to undeclared static property app\orm\Model::$Query in C:\xampp3\htdocs\roles_permisos\app\orm\Model.php:235
+Stack trace:
+#0 C:\xampp3\htdocs\roles_permisos\app\Http\controllers\UserController.php(23): app\orm\Model->procedure('proc_users', 'c', Array)
+#1 [internal function]: app\Http\controllers\UserController->create()
+#2 C:\xampp3\htdocs\roles_permisos\vendor\bramus\router\src\Bramus\Router\Router.php(482): call_user_func_array(Array, Array)
+#3 C:\xampp3\htdocs\roles_permisos\vendor\bramus\router\src\Bramus\Router\Router.php(440): Bramus\Router\Router->invoke('UserController@...', Array)
+#4 C:\xampp3\htdocs\roles_permisos\vendor\bramus\router\src\Bramus\Router\Router.php(287): Bramus\Router\Router->handle(Array, true)
+#5 C:\xampp3\htdocs\roles_permisos\public\index.php(19): Bramus\Router\Router->run()
+#6 {main}
+  thrown in C:\xampp3\htdocs\roles_permisos\app\orm\Model.php on line 235
+[28-Sep-2024 04:06:55 Europe/Berlin] PHP Fatal error:  Uncaught Error: Access to undeclared static property app\orm\Model::$Query in C:\xampp3\htdocs\roles_permisos\app\orm\Model.php:235
+Stack trace:
+#0 C:\xampp3\htdocs\roles_permisos\app\Http\controllers\UserController.php(23): app\orm\Model->procedure('proc_users', 'c', Array)
+#1 [internal function]: app\Http\controllers\UserController->create()
+#2 C:\xampp3\htdocs\roles_permisos\vendor\bramus\router\src\Bramus\Router\Router.php(482): call_user_func_array(Array, Array)
+#3 C:\xampp3\htdocs\roles_permisos\vendor\bramus\router\src\Bramus\Router\Router.php(440): Bramus\Router\Router->invoke('UserController@...', Array)
+#4 C:\xampp3\htdocs\roles_permisos\vendor\bramus\router\src\Bramus\Router\Router.php(287): Bramus\Router\Router->handle(Array, true)
+#5 C:\xampp3\htdocs\roles_permisos\public\index.php(19): Bramus\Router\Router->run()
+#6 {main}
+  thrown in C:\xampp3\htdocs\roles_permisos\app\orm\Model.php on line 235
+[28-Sep-2024 04:07:30 Europe/Berlin] PHP Fatal error:  Uncaught Error: Access to undeclared static property app\orm\Model::$Query in C:\xampp3\htdocs\roles_permisos\app\orm\Model.php:235
+Stack trace:
+#0 C:\xampp3\htdocs\roles_permisos\app\Http\controllers\UserController.php(23): app\orm\Model->procedure('proc_users', 'c', Array)
+#1 [internal function]: app\Http\controllers\UserController->create()
+#2 C:\xampp3\htdocs\roles_permisos\vendor\bramus\router\src\Bramus\Router\Router.php(482): call_user_func_array(Array, Array)
+#3 C:\xampp3\htdocs\roles_permisos\vendor\bramus\router\src\Bramus\Router\Router.php(440): Bramus\Router\Router->invoke('UserController@...', Array)
+#4 C:\xampp3\htdocs\roles_permisos\vendor\bramus\router\src\Bramus\Router\Router.php(287): Bramus\Router\Router->handle(Array, true)
+#5 C:\xampp3\htdocs\roles_permisos\public\index.php(19): Bramus\Router\Router->run()
+#6 {main}
+  thrown in C:\xampp3\htdocs\roles_permisos\app\orm\Model.php on line 235
+[28-Sep-2024 04:08:07 Europe/Berlin] PHP Fatal error:  Uncaught Error: Access to undeclared static property app\orm\Model::$Query in C:\xampp3\htdocs\roles_permisos\app\orm\Model.php:235
+Stack trace:
+#0 C:\xampp3\htdocs\roles_permisos\app\Http\controllers\UserController.php(23): app\orm\Model->procedure('proc_users', 'c', Array)
+#1 [internal function]: app\Http\controllers\UserController->create()
+#2 C:\xampp3\htdocs\roles_permisos\vendor\bramus\router\src\Bramus\Router\Router.php(482): call_user_func_array(Array, Array)
+#3 C:\xampp3\htdocs\roles_permisos\vendor\bramus\router\src\Bramus\Router\Router.php(440): Bramus\Router\Router->invoke('UserController@...', Array)
+#4 C:\xampp3\htdocs\roles_permisos\vendor\bramus\router\src\Bramus\Router\Router.php(287): Bramus\Router\Router->handle(Array, true)
+#5 C:\xampp3\htdocs\roles_permisos\public\index.php(19): Bramus\Router\Router->run()
+#6 {main}
+  thrown in C:\xampp3\htdocs\roles_permisos\app\orm\Model.php on line 235
+[28-Sep-2024 04:22:40 Europe/Berlin] PHP Warning:  compact(): Undefined variable $Roles in C:\xampp3\htdocs\roles_permisos\app\Http\controllers\UserController.php on line 24
+[28-Sep-2024 04:53:00 Europe/Berlin] PHP Fatal error:  Uncaught Windwalker\Edge\Exception\LayoutNotFoundException: View file not found: ../resources/views/layoutapp.blade.php.
+ (Paths: ) in C:\xampp3\htdocs\roles_permisos\vendor\windwalker\edge\src\Loader\EdgeFileLoader.php:69
+Stack trace:
+#0 C:\xampp3\htdocs\roles_permisos\vendor\windwalker\edge\src\Edge.php(158): Windwalker\Edge\Loader\EdgeFileLoader->find('../resources/vi...')
+#1 C:\xampp3\htdocs\roles_permisos\vendor\windwalker\edge\src\Edge.php(227) : eval()'d code(93): Windwalker\Edge\Edge->render('../resources/vi...', Array)
+#2 C:\xampp3\htdocs\roles_permisos\vendor\windwalker\edge\src\Edge.php(227): eval()
+#3 C:\xampp3\htdocs\roles_permisos\vendor\windwalker\edge\src\Edge.php(182): Windwalker\Edge\Edge->Windwalker\Edge\{closure}('../resources/vi...')
+#4 C:\xampp3\htdocs\roles_permisos\app\Http\lib\publicfunction.php(19): Windwalker\Edge\Edge->render('../resources/vi...', Array)
+#5 C:\xampp3\htdocs\roles_permisos\app\Http\controllers\UserController.php(24): View('users.create', Array)
+#6 [internal function]: app\Http\controllers\UserController->create()
+#7 C:\xampp3\htdocs\roles_permisos\vendor\bramus\router\src\Bramus\Router\Router.php(482): call_user_func_array(Array, Array)
+#8 C:\xampp3\htdocs\roles_permisos\vendor\bramus\router\src\Bramus\Router\Router.php(440): Bramus\Router\Router->invoke('UserController@...', Array)
+#9 C:\xampp3\htdocs\roles_permisos\vendor\bramus\router\src\Bramus\Router\Router.php(287): Bramus\Router\Router->handle(Array, true)
+#10 C:\xampp3\htdocs\roles_permisos\public\index.php(19): Bramus\Router\Router->run()
+#11 {main}
+
+Next Windwalker\Edge\Exception\EdgeException: View file not found: ../resources/views/layoutapp.blade.php.
+ (Paths: )
+
+| View layout: ../resources/views/users/create.blade.php (../resources/views/users/create.blade.php) in C:\xampp3\htdocs\roles_permisos\vendor\windwalker\edge\src\Edge.php:260
+Stack trace:
+#0 C:\xampp3\htdocs\roles_permisos\vendor\windwalker\edge\src\Edge.php(185): Windwalker\Edge\Edge->wrapException(Object(Windwalker\Edge\Exception\LayoutNotFoundException), '../resources/vi...', '../resources/vi...')
+#1 C:\xampp3\htdocs\roles_permisos\app\Http\lib\publicfunction.php(19): Windwalker\Edge\Edge->render('../resources/vi...', Array)
+#2 C:\xampp3\htdocs\roles_permisos\app\Http\controllers\UserController.php(24): View('users.create', Array)
+#3 [internal function]: app\Http\controllers\UserController->create()
+#4 C:\xampp3\htdocs\roles_permisos\vendor\bramus\router\src\Bramus\Router\Router.php(482): call_user_func_array(Array, Array)
+#5 C:\xampp3\htdocs\roles_permisos\vendor\bramus\router\src\Bramus\Router\Router.php(440): Bramus\Router\Router->invoke('UserController@...', Array)
+#6 C:\xampp3\htdocs\roles_permisos\vendor\bramus\router\src\Bramus\Router\Router.php(287): Bramus\Router\Router->handle(Array, true)
+#7 C:\xampp3\htdocs\roles_permisos\public\index.php(19): Bramus\Router\Router->run()
+#8 {main}
+  thrown in C:\xampp3\htdocs\roles_permisos\vendor\windwalker\edge\src\Edge.php on line 260
+[28-Sep-2024 04:53:45 Europe/Berlin] PHP Fatal error:  Uncaught Windwalker\Edge\Exception\LayoutNotFoundException: View file not found: ../resources/views/layoutsapp.blade.php.
+ (Paths: ) in C:\xampp3\htdocs\roles_permisos\vendor\windwalker\edge\src\Loader\EdgeFileLoader.php:69
+Stack trace:
+#0 C:\xampp3\htdocs\roles_permisos\vendor\windwalker\edge\src\Edge.php(158): Windwalker\Edge\Loader\EdgeFileLoader->find('../resources/vi...')
+#1 C:\xampp3\htdocs\roles_permisos\vendor\windwalker\edge\src\Edge.php(227) : eval()'d code(94): Windwalker\Edge\Edge->render('../resources/vi...', Array)
+#2 C:\xampp3\htdocs\roles_permisos\vendor\windwalker\edge\src\Edge.php(227): eval()
+#3 C:\xampp3\htdocs\roles_permisos\vendor\windwalker\edge\src\Edge.php(182): Windwalker\Edge\Edge->Windwalker\Edge\{closure}('../resources/vi...')
+#4 C:\xampp3\htdocs\roles_permisos\app\Http\lib\publicfunction.php(19): Windwalker\Edge\Edge->render('../resources/vi...', Array)
+#5 C:\xampp3\htdocs\roles_permisos\app\Http\controllers\UserController.php(24): View('users.create', Array)
+#6 [internal function]: app\Http\controllers\UserController->create()
+#7 C:\xampp3\htdocs\roles_permisos\vendor\bramus\router\src\Bramus\Router\Router.php(482): call_user_func_array(Array, Array)
+#8 C:\xampp3\htdocs\roles_permisos\vendor\bramus\router\src\Bramus\Router\Router.php(440): Bramus\Router\Router->invoke('UserController@...', Array)
+#9 C:\xampp3\htdocs\roles_permisos\vendor\bramus\router\src\Bramus\Router\Router.php(287): Bramus\Router\Router->handle(Array, true)
+#10 C:\xampp3\htdocs\roles_permisos\public\index.php(19): Bramus\Router\Router->run()
+#11 {main}
+
+Next Windwalker\Edge\Exception\EdgeException: View file not found: ../resources/views/layoutsapp.blade.php.
+ (Paths: )
+
+| View layout: ../resources/views/users/create.blade.php (../resources/views/users/create.blade.php) in C:\xampp3\htdocs\roles_permisos\vendor\windwalker\edge\src\Edge.php:260
+Stack trace:
+#0 C:\xampp3\htdocs\roles_permisos\vendor\windwalker\edge\src\Edge.php(185): Windwalker\Edge\Edge->wrapException(Object(Windwalker\Edge\Exception\LayoutNotFoundException), '../resources/vi...', '../resources/vi...')
+#1 C:\xampp3\htdocs\roles_permisos\app\Http\lib\publicfunction.php(19): Windwalker\Edge\Edge->render('../resources/vi...', Array)
+#2 C:\xampp3\htdocs\roles_permisos\app\Http\controllers\UserController.php(24): View('users.create', Array)
+#3 [internal function]: app\Http\controllers\UserController->create()
+#4 C:\xampp3\htdocs\roles_permisos\vendor\bramus\router\src\Bramus\Router\Router.php(482): call_user_func_array(Array, Array)
+#5 C:\xampp3\htdocs\roles_permisos\vendor\bramus\router\src\Bramus\Router\Router.php(440): Bramus\Router\Router->invoke('UserController@...', Array)
+#6 C:\xampp3\htdocs\roles_permisos\vendor\bramus\router\src\Bramus\Router\Router.php(287): Bramus\Router\Router->handle(Array, true)
+#7 C:\xampp3\htdocs\roles_permisos\public\index.php(19): Bramus\Router\Router->run()
+#8 {main}
+  thrown in C:\xampp3\htdocs\roles_permisos\vendor\windwalker\edge\src\Edge.php on line 260

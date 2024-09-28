@@ -5,8 +5,5 @@ spl_autoload_register(function($file){
  
    if(file_exists($file)){
     require $file;
-   }else{
-    echo "error archivo no existe";
-    exit;
-   }
+   } 
 });

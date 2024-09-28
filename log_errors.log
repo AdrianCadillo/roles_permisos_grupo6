@@ -1,0 +1,9 @@
+[28-Sep-2024 02:40:05 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "app\Http\controllers\Usuario1" not found in C:\xampp3\htdocs\roles_permisos\app\Http\controllers\UserController.php:13
+Stack trace:
+#0 [internal function]: app\Http\controllers\UserController->index()
+#1 C:\xampp3\htdocs\roles_permisos\vendor\bramus\router\src\Bramus\Router\Router.php(482): call_user_func_array(Array, Array)
+#2 C:\xampp3\htdocs\roles_permisos\vendor\bramus\router\src\Bramus\Router\Router.php(440): Bramus\Router\Router->invoke('UserController@...', Array)
+#3 C:\xampp3\htdocs\roles_permisos\vendor\bramus\router\src\Bramus\Router\Router.php(287): Bramus\Router\Router->handle(Array, true)
+#4 C:\xampp3\htdocs\roles_permisos\public\index.php(19): Bramus\Router\Router->run()
+#5 {main}
+  thrown in C:\xampp3\htdocs\roles_permisos\app\Http\controllers\UserController.php on line 13
