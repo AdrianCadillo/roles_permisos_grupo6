@@ -14,6 +14,8 @@ $router->post("/user/store",'UserController@store');
 
 $router->get("/user/create",'UserController@create');
 
+$router->post("/user/{id}/delete",'UserController@delete');
+ 
 $router->get("/",function(){
   echo "LA PÁGINA DE INCIO";
 });

@@ -5,5 +5,5 @@ use app\orm\Model;
 
 class Usuario_Role extends Model /// usuarios
 {
-   protected $Alias = "ur";
+   protected $Alias = " as ur";
 }

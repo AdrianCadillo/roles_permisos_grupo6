@@ -129,3 +129,56 @@ Stack trace:
 #7 C:\xampp3\htdocs\roles_permisos\public\index.php(19): Bramus\Router\Router->run()
 #8 {main}
   thrown in C:\xampp3\htdocs\roles_permisos\vendor\windwalker\edge\src\Edge.php on line 260
+[01-Oct-2024 02:25:12 Europe/Berlin] PHP Warning:  Attempt to read property "id_rol" on string in C:\xampp3\htdocs\roles_permisos\app\Http\controllers\UserController.php on line 52
+[01-Oct-2024 03:30:03 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: count(): Argument #1 ($value) must be of type Countable|array, string given in C:\xampp3\htdocs\roles_permisos\app\Http\controllers\UserController.php:51
+Stack trace:
+#0 C:\xampp3\htdocs\roles_permisos\app\Http\controllers\UserController.php(51): count('')
+#1 [internal function]: app\Http\controllers\UserController->store()
+#2 C:\xampp3\htdocs\roles_permisos\vendor\bramus\router\src\Bramus\Router\Router.php(482): call_user_func_array(Array, Array)
+#3 C:\xampp3\htdocs\roles_permisos\vendor\bramus\router\src\Bramus\Router\Router.php(440): Bramus\Router\Router->invoke('UserController@...', Array)
+#4 C:\xampp3\htdocs\roles_permisos\vendor\bramus\router\src\Bramus\Router\Router.php(287): Bramus\Router\Router->handle(Array, true)
+#5 C:\xampp3\htdocs\roles_permisos\public\index.php(19): Bramus\Router\Router->run()
+#6 {main}
+  thrown in C:\xampp3\htdocs\roles_permisos\app\Http\controllers\UserController.php on line 51
+[01-Oct-2024 03:30:43 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: count(): Argument #1 ($value) must be of type Countable|array, string given in C:\xampp3\htdocs\roles_permisos\app\Http\controllers\UserController.php:51
+Stack trace:
+#0 C:\xampp3\htdocs\roles_permisos\app\Http\controllers\UserController.php(51): count('')
+#1 [internal function]: app\Http\controllers\UserController->store()
+#2 C:\xampp3\htdocs\roles_permisos\vendor\bramus\router\src\Bramus\Router\Router.php(482): call_user_func_array(Array, Array)
+#3 C:\xampp3\htdocs\roles_permisos\vendor\bramus\router\src\Bramus\Router\Router.php(440): Bramus\Router\Router->invoke('UserController@...', Array)
+#4 C:\xampp3\htdocs\roles_permisos\vendor\bramus\router\src\Bramus\Router\Router.php(287): Bramus\Router\Router->handle(Array, true)
+#5 C:\xampp3\htdocs\roles_permisos\public\index.php(19): Bramus\Router\Router->run()
+#6 {main}
+  thrown in C:\xampp3\htdocs\roles_permisos\app\Http\controllers\UserController.php on line 51
+[01-Oct-2024 03:36:43 Europe/Berlin] PHP Fatal error:  Uncaught ParseError: syntax error, unexpected token ";", expecting ")" in C:\xampp3\htdocs\roles_permisos\vendor\windwalker\edge\src\Edge.php(227) : eval()'d code:28
+Stack trace:
+#0 C:\xampp3\htdocs\roles_permisos\vendor\windwalker\edge\src\Edge.php(182): Windwalker\Edge\Edge->Windwalker\Edge\{closure}('../resources/vi...')
+#1 C:\xampp3\htdocs\roles_permisos\app\Http\lib\publicfunction.php(19): Windwalker\Edge\Edge->render('../resources/vi...', Array)
+#2 C:\xampp3\htdocs\roles_permisos\app\Http\controllers\UserController.php(30): View('users.create', Array)
+#3 [internal function]: app\Http\controllers\UserController->create()
+#4 C:\xampp3\htdocs\roles_permisos\vendor\bramus\router\src\Bramus\Router\Router.php(482): call_user_func_array(Array, Array)
+#5 C:\xampp3\htdocs\roles_permisos\vendor\bramus\router\src\Bramus\Router\Router.php(440): Bramus\Router\Router->invoke('UserController@...', Array)
+#6 C:\xampp3\htdocs\roles_permisos\vendor\bramus\router\src\Bramus\Router\Router.php(287): Bramus\Router\Router->handle(Array, true)
+#7 C:\xampp3\htdocs\roles_permisos\public\index.php(19): Bramus\Router\Router->run()
+#8 {main}
+
+Next Windwalker\Edge\Exception\EdgeException: syntax error, unexpected token ";", expecting ")"
+
+| View layout: ../resources/views/users/create.blade.php (../resources/views/users/create.blade.php) in C:\xampp3\htdocs\roles_permisos\vendor\windwalker\edge\src\Edge.php:260
+Stack trace:
+#0 C:\xampp3\htdocs\roles_permisos\vendor\windwalker\edge\src\Edge.php(185): Windwalker\Edge\Edge->wrapException(Object(ParseError), '../resources/vi...', '../resources/vi...')
+#1 C:\xampp3\htdocs\roles_permisos\app\Http\lib\publicfunction.php(19): Windwalker\Edge\Edge->render('../resources/vi...', Array)
+#2 C:\xampp3\htdocs\roles_permisos\app\Http\controllers\UserController.php(30): View('users.create', Array)
+#3 [internal function]: app\Http\controllers\UserController->create()
+#4 C:\xampp3\htdocs\roles_permisos\vendor\bramus\router\src\Bramus\Router\Router.php(482): call_user_func_array(Array, Array)
+#5 C:\xampp3\htdocs\roles_permisos\vendor\bramus\router\src\Bramus\Router\Router.php(440): Bramus\Router\Router->invoke('UserController@...', Array)
+#6 C:\xampp3\htdocs\roles_permisos\vendor\bramus\router\src\Bramus\Router\Router.php(287): Bramus\Router\Router->handle(Array, true)
+#7 C:\xampp3\htdocs\roles_permisos\public\index.php(19): Bramus\Router\Router->run()
+#8 {main}
+  thrown in C:\xampp3\htdocs\roles_permisos\vendor\windwalker\edge\src\Edge.php on line 260
+[01-Oct-2024 04:05:43 Europe/Berlin] PHP Warning:  Undefined variable $route in C:\xampp3\htdocs\roles_permisos\router\web.php on line 17
+[01-Oct-2024 04:05:43 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to a member function post() on null in C:\xampp3\htdocs\roles_permisos\router\web.php:17
+Stack trace:
+#0 C:\xampp3\htdocs\roles_permisos\public\index.php(18): require()
+#1 {main}
+  thrown in C:\xampp3\htdocs\roles_permisos\router\web.php on line 17

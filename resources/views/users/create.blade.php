@@ -10,22 +10,31 @@
            <div class="card-header">
               <h4>Crear usuarios</h4>
            </div>
-           
-
-           <form action="" method="post">
+           <form action="{{route("user/store")}}" method="post">
+            <input type="hidden" name="token_" value="{{$this->Csrf()}}">
             <div class="card-body">
+              @if ($this->existSession("errors"))
+                 <div class="alert alert-danger">
+                    <ul>
+                      @foreach ($this->getSession("errors") as $error)
+                        <li>{{$error}}</li>
+                      @endforeach
+                    </ul>
+                 </div>
+                 @php $this->destroySession("errors") @endphp
+              @endif
               <div class="row">
                  <div class="col-xl-5 col-lg-5 col-md-6 col-12">
                     <div class="from-group">
                        <label for="name" class="form-label"><b>Nombre usuario <span class="text-danger">*</span></b></label>
-                       <input type="text" name="name" id="name" class="form-control">
+                       <input type="text" name="name" value="@php echo $this->getSession("name");$this->destroySession("name") @endphp" id="name" class="form-control">
                     </div>
                  </div>
 
                  <div class="col-xl-7 col-lg-7 col-md-6 col-12">
                   <div class="from-group">
                      <label for="email" class="form-label"><b>Email <span class="text-danger">*</span></b></label>
-                     <input type="text" name="email" id="email" class="form-control" placeholder="ejemplo@curso.com">
+                     <input type="text" name="email" id="email" class="form-control" value="@php echo $this->getSession("email");$this->destroySession("email") @endphp"  placeholder="ejemplo@curso.com">
                   </div>
                </div>
 

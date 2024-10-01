@@ -18,7 +18,7 @@ class Model extends Conexion implements Orm
        if(empty($this->table)){
           $this->table = $this->getNameClass();
        }
-      $this->Query = "SELECT * FROM ".$this->table." as ".$this->Alias;
+      $this->Query = "SELECT * FROM ".$this->table.$this->Alias;
       return $this;
     }
 

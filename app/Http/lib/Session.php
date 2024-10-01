@@ -23,4 +23,11 @@ trait Session{
     public function existSession(string $NameSession):bool{
       return isset($_SESSION[$NameSession]);
     }
+
+    /**
+     * Eliminar una variable de session en especifico
+     */
+    public function destroySession(String $NameSession){
+       unset($_SESSION[$NameSession]);
+    }
 }

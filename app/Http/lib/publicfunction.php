@@ -49,3 +49,15 @@ use Windwalker\Edge\Loader\EdgeFileLoader;
   function layouts(string $layout){
      return "../".str_replace(".","/",DIRECTORIO_LAYOUTS.$layout).".blade.php";
   }
+
+  function redirect(string $redirect){
+     header("location:".URL_BASE.$redirect);
+  }
+
+  /**
+   * Método que devuelve un json
+   */
+  function json(array $data,int $code=200){
+     http_response_code($code);
+     echo json_encode($data);
+  }
