@@ -15,10 +15,11 @@
                 <a href="{{route("/user/create")}}" class="btn btn-primary mb-2">Agregar uno nuevo <i class="fas fa-plus"></i></a>
                @if ($this->existSession("success"))
                 <div class="alert alert-success">
-                    Usuario registrado correctamente!
+                   {{$this->getSession("success")}}
                 </div>
                 @php $this->destroySession("success") @endphp
                 @endif
+ 
                 
                 @if ($this->existSession("error"))
                 <div class="alert alert-danger">
@@ -74,7 +75,7 @@
                                   <td>
                                     <div class="row">
                                         <div class="col-auto">
-                                            <a href="" class="btn btn-warning btn-sm"><i class="fas fa-edit"></i></a>
+                                            <a href="{{route("user/".$user->id_usuario."/editar")}}" class="btn btn-warning btn-sm"><i class="fas fa-edit"></i></a>
                                         </div>
                                         <div class="col-auto">
                                            <button class="btn btn-danger btn-sm" onclick="ConfirmaEliminado(`{{$user->id_usuario}}`,`{{$user->name}}`)"><i class="fas fa-trash-alt"></i></button>

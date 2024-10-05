@@ -30,6 +30,15 @@
               </p>
             </a>
           </li>
+
+          <li class="nav-item">
+            <a href="{{route("roles")}}" class="nav-link">
+              <i class="nav-icon fas fa-users"></i>
+              <p>
+               Roles
+              </p>
+            </a>
+          </li>
         </ul>
       </nav>
       <!-- /.sidebar-menu -->

@@ -89,9 +89,9 @@ class UserController extends Controller
      */
     private function procesoRegistroUsuario(){
         /// registrar a los usuarios
-        $usuario = new Usuario; $usuarionew = new Usuario;
+        $usuario = new Usuario;  
 
-        $UsuarioExiste = $usuarionew->query()->where("email", "=", $this->post("email"))
+        $UsuarioExiste = $usuario->query()->where("email", "=", $this->post("email"))
             ->Or("name", "=", $this->post("name"))->get();
         if (count($UsuarioExiste) > 0) {
             $this->session("existe", "El usuario con el correo | name que indicaste ya existe!");
@@ -117,7 +117,7 @@ class UserController extends Controller
                     }
 
                     if ($responseData) {
-                        $this->session("success", "success");
+                        $this->session("success", "Usuario registrado correctamente!");
                     }
                 }
             } else {
@@ -126,5 +126,72 @@ class UserController extends Controller
         }
     }
  
+
+    /**
+     * Método para editar a los usuarios
+     */
+    public function editar($id)
+    {
+        $usuariomodel = new Usuario; $modelrole = new Role; $usurolemodel = new Usuario_Role;
+
+        $usuario = $usuariomodel->query()->where("id_usuario","=",$id)->get();
+        /// mostramos todos los roles
+        $rolesNotDelUsuario = $usuariomodel->procedure("proc_gestion_roles_user","C",[$id,'rna']);
+
+        /// mostrar los roles del usuario que queremos editar
+        
+        $rolesDelUsuario = $usuariomodel->procedure("proc_gestion_roles_user","C",[$id,'ra']);
+
+        View("users.editar",compact("usuario","rolesNotDelUsuario","rolesDelUsuario"));
+    }
+
+
+    /**
+     * Para guardar los cambios del usuario
+     */
+    public function update($id){
+        if($this->VerifyTokenCsrf($this->post("token_"))){
+             $this->procesoModificar($id);
+         }else{
+             $this->session("error_token","error_token");
+         }
+ 
+         redirect("users");
+    }
+
+    /**
+     * Proceso para guardar los cambios
+     */
+    private function procesoModificar($id)
+    {
+        $modelUser = new Usuario;  
+
+        $response = $modelUser->update([
+            "id_usuario" => $id,
+            "name" => $this->post("name"),
+            "email" => $this->post("email"),
+            "estado" => $this->post("estado")
+        ]);
+
+        /// eliminar los roles antiguos asignados al usuairos
+        $modelUser->procedure("proc_gestion_roles_user","d",[$id,'dr']);
+
+        /// asignar nuevamente los roles
+        if (count($this->post("role")) > 0) {
+            $usu_role = new Usuario_Role;
+            foreach ($this->post("role") as $role) {
+                $usu_role->id_usuario = $id;
+                $usu_role->id_rol = $role;
+
+                $responseData = $usu_role->save();
+            }
+
+            if ($responseData) {
+                $this->session("success", "Usuario modificado correctamente!");
+            }
+        }
+        
+        
+    }
 
 }

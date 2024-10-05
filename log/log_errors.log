@@ -182,3 +182,112 @@ Stack trace:
 #0 C:\xampp3\htdocs\roles_permisos\public\index.php(18): require()
 #1 {main}
   thrown in C:\xampp3\htdocs\roles_permisos\router\web.php on line 17
+[05-Oct-2024 02:27:40 Europe/Berlin] PHP Warning:  Undefined variable $roluser in C:\xampp3\htdocs\roles_permisos\vendor\windwalker\edge\src\Edge.php(227) : eval()'d code on line 75
+[05-Oct-2024 02:27:40 Europe/Berlin] PHP Warning:  Attempt to read property "id_rol" on null in C:\xampp3\htdocs\roles_permisos\vendor\windwalker\edge\src\Edge.php(227) : eval()'d code on line 75
+[05-Oct-2024 02:27:40 Europe/Berlin] PHP Warning:  Undefined variable $roluser in C:\xampp3\htdocs\roles_permisos\vendor\windwalker\edge\src\Edge.php(227) : eval()'d code on line 75
+[05-Oct-2024 02:27:40 Europe/Berlin] PHP Warning:  Attempt to read property "id_rol" on null in C:\xampp3\htdocs\roles_permisos\vendor\windwalker\edge\src\Edge.php(227) : eval()'d code on line 75
+[05-Oct-2024 02:27:40 Europe/Berlin] PHP Warning:  Undefined variable $roluser in C:\xampp3\htdocs\roles_permisos\vendor\windwalker\edge\src\Edge.php(227) : eval()'d code on line 75
+[05-Oct-2024 02:27:40 Europe/Berlin] PHP Warning:  Attempt to read property "id_rol" on null in C:\xampp3\htdocs\roles_permisos\vendor\windwalker\edge\src\Edge.php(227) : eval()'d code on line 75
+[05-Oct-2024 02:27:40 Europe/Berlin] PHP Warning:  Undefined variable $roluser in C:\xampp3\htdocs\roles_permisos\vendor\windwalker\edge\src\Edge.php(227) : eval()'d code on line 75
+[05-Oct-2024 02:27:40 Europe/Berlin] PHP Warning:  Attempt to read property "id_rol" on null in C:\xampp3\htdocs\roles_permisos\vendor\windwalker\edge\src\Edge.php(227) : eval()'d code on line 75
+[05-Oct-2024 02:27:40 Europe/Berlin] PHP Warning:  Undefined variable $roluser in C:\xampp3\htdocs\roles_permisos\vendor\windwalker\edge\src\Edge.php(227) : eval()'d code on line 75
+[05-Oct-2024 02:27:40 Europe/Berlin] PHP Warning:  Attempt to read property "id_rol" on null in C:\xampp3\htdocs\roles_permisos\vendor\windwalker\edge\src\Edge.php(227) : eval()'d code on line 75
+[05-Oct-2024 02:27:40 Europe/Berlin] PHP Warning:  Undefined variable $roluser in C:\xampp3\htdocs\roles_permisos\vendor\windwalker\edge\src\Edge.php(227) : eval()'d code on line 75
+[05-Oct-2024 02:27:40 Europe/Berlin] PHP Warning:  Attempt to read property "id_rol" on null in C:\xampp3\htdocs\roles_permisos\vendor\windwalker\edge\src\Edge.php(227) : eval()'d code on line 75
+[05-Oct-2024 02:27:40 Europe/Berlin] PHP Warning:  Undefined variable $roluser in C:\xampp3\htdocs\roles_permisos\vendor\windwalker\edge\src\Edge.php(227) : eval()'d code on line 75
+[05-Oct-2024 02:27:40 Europe/Berlin] PHP Warning:  Attempt to read property "id_rol" on null in C:\xampp3\htdocs\roles_permisos\vendor\windwalker\edge\src\Edge.php(227) : eval()'d code on line 75
+[05-Oct-2024 02:27:40 Europe/Berlin] PHP Warning:  Undefined variable $roluser in C:\xampp3\htdocs\roles_permisos\vendor\windwalker\edge\src\Edge.php(227) : eval()'d code on line 75
+[05-Oct-2024 02:27:40 Europe/Berlin] PHP Warning:  Attempt to read property "id_rol" on null in C:\xampp3\htdocs\roles_permisos\vendor\windwalker\edge\src\Edge.php(227) : eval()'d code on line 75
+[05-Oct-2024 02:27:40 Europe/Berlin] PHP Warning:  Undefined variable $roluser in C:\xampp3\htdocs\roles_permisos\vendor\windwalker\edge\src\Edge.php(227) : eval()'d code on line 75
+[05-Oct-2024 02:27:40 Europe/Berlin] PHP Warning:  Attempt to read property "id_rol" on null in C:\xampp3\htdocs\roles_permisos\vendor\windwalker\edge\src\Edge.php(227) : eval()'d code on line 75
+[05-Oct-2024 02:27:40 Europe/Berlin] PHP Warning:  Undefined variable $roluser in C:\xampp3\htdocs\roles_permisos\vendor\windwalker\edge\src\Edge.php(227) : eval()'d code on line 75
+[05-Oct-2024 02:27:40 Europe/Berlin] PHP Warning:  Attempt to read property "id_rol" on null in C:\xampp3\htdocs\roles_permisos\vendor\windwalker\edge\src\Edge.php(227) : eval()'d code on line 75
+[05-Oct-2024 02:38:44 Europe/Berlin] PHP Fatal error:  Uncaught ParseError: syntax error, unexpected token "endif" in C:\xampp3\htdocs\roles_permisos\vendor\windwalker\edge\src\Edge.php(227) : eval()'d code:66
+Stack trace:
+#0 C:\xampp3\htdocs\roles_permisos\vendor\windwalker\edge\src\Edge.php(182): Windwalker\Edge\Edge->Windwalker\Edge\{closure}('../resources/vi...')
+#1 C:\xampp3\htdocs\roles_permisos\app\Http\lib\publicfunction.php(19): Windwalker\Edge\Edge->render('../resources/vi...', Array)
+#2 C:\xampp3\htdocs\roles_permisos\app\Http\controllers\UserController.php(149): View('users.editar', Array)
+#3 [internal function]: app\Http\controllers\UserController->editar('8')
+#4 C:\xampp3\htdocs\roles_permisos\vendor\bramus\router\src\Bramus\Router\Router.php(482): call_user_func_array(Array, Array)
+#5 C:\xampp3\htdocs\roles_permisos\vendor\bramus\router\src\Bramus\Router\Router.php(440): Bramus\Router\Router->invoke('UserController@...', Array)
+#6 C:\xampp3\htdocs\roles_permisos\vendor\bramus\router\src\Bramus\Router\Router.php(287): Bramus\Router\Router->handle(Array, true)
+#7 C:\xampp3\htdocs\roles_permisos\public\index.php(19): Bramus\Router\Router->run()
+#8 {main}
+
+Next Windwalker\Edge\Exception\EdgeException: syntax error, unexpected token "endif"
+
+| View layout: ../resources/views/users/editar.blade.php (../resources/views/users/editar.blade.php) in C:\xampp3\htdocs\roles_permisos\vendor\windwalker\edge\src\Edge.php:260
+Stack trace:
+#0 C:\xampp3\htdocs\roles_permisos\vendor\windwalker\edge\src\Edge.php(185): Windwalker\Edge\Edge->wrapException(Object(ParseError), '../resources/vi...', '../resources/vi...')
+#1 C:\xampp3\htdocs\roles_permisos\app\Http\lib\publicfunction.php(19): Windwalker\Edge\Edge->render('../resources/vi...', Array)
+#2 C:\xampp3\htdocs\roles_permisos\app\Http\controllers\UserController.php(149): View('users.editar', Array)
+#3 [internal function]: app\Http\controllers\UserController->editar('8')
+#4 C:\xampp3\htdocs\roles_permisos\vendor\bramus\router\src\Bramus\Router\Router.php(482): call_user_func_array(Array, Array)
+#5 C:\xampp3\htdocs\roles_permisos\vendor\bramus\router\src\Bramus\Router\Router.php(440): Bramus\Router\Router->invoke('UserController@...', Array)
+#6 C:\xampp3\htdocs\roles_permisos\vendor\bramus\router\src\Bramus\Router\Router.php(287): Bramus\Router\Router->handle(Array, true)
+#7 C:\xampp3\htdocs\roles_permisos\public\index.php(19): Bramus\Router\Router->run()
+#8 {main}
+  thrown in C:\xampp3\htdocs\roles_permisos\vendor\windwalker\edge\src\Edge.php on line 260
+[05-Oct-2024 02:38:59 Europe/Berlin] PHP Fatal error:  Uncaught ParseError: syntax error, unexpected token "endif" in C:\xampp3\htdocs\roles_permisos\vendor\windwalker\edge\src\Edge.php(227) : eval()'d code:66
+Stack trace:
+#0 C:\xampp3\htdocs\roles_permisos\vendor\windwalker\edge\src\Edge.php(182): Windwalker\Edge\Edge->Windwalker\Edge\{closure}('../resources/vi...')
+#1 C:\xampp3\htdocs\roles_permisos\app\Http\lib\publicfunction.php(19): Windwalker\Edge\Edge->render('../resources/vi...', Array)
+#2 C:\xampp3\htdocs\roles_permisos\app\Http\controllers\UserController.php(149): View('users.editar', Array)
+#3 [internal function]: app\Http\controllers\UserController->editar('8')
+#4 C:\xampp3\htdocs\roles_permisos\vendor\bramus\router\src\Bramus\Router\Router.php(482): call_user_func_array(Array, Array)
+#5 C:\xampp3\htdocs\roles_permisos\vendor\bramus\router\src\Bramus\Router\Router.php(440): Bramus\Router\Router->invoke('UserController@...', Array)
+#6 C:\xampp3\htdocs\roles_permisos\vendor\bramus\router\src\Bramus\Router\Router.php(287): Bramus\Router\Router->handle(Array, true)
+#7 C:\xampp3\htdocs\roles_permisos\public\index.php(19): Bramus\Router\Router->run()
+#8 {main}
+
+Next Windwalker\Edge\Exception\EdgeException: syntax error, unexpected token "endif"
+
+| View layout: ../resources/views/users/editar.blade.php (../resources/views/users/editar.blade.php) in C:\xampp3\htdocs\roles_permisos\vendor\windwalker\edge\src\Edge.php:260
+Stack trace:
+#0 C:\xampp3\htdocs\roles_permisos\vendor\windwalker\edge\src\Edge.php(185): Windwalker\Edge\Edge->wrapException(Object(ParseError), '../resources/vi...', '../resources/vi...')
+#1 C:\xampp3\htdocs\roles_permisos\app\Http\lib\publicfunction.php(19): Windwalker\Edge\Edge->render('../resources/vi...', Array)
+#2 C:\xampp3\htdocs\roles_permisos\app\Http\controllers\UserController.php(149): View('users.editar', Array)
+#3 [internal function]: app\Http\controllers\UserController->editar('8')
+#4 C:\xampp3\htdocs\roles_permisos\vendor\bramus\router\src\Bramus\Router\Router.php(482): call_user_func_array(Array, Array)
+#5 C:\xampp3\htdocs\roles_permisos\vendor\bramus\router\src\Bramus\Router\Router.php(440): Bramus\Router\Router->invoke('UserController@...', Array)
+#6 C:\xampp3\htdocs\roles_permisos\vendor\bramus\router\src\Bramus\Router\Router.php(287): Bramus\Router\Router->handle(Array, true)
+#7 C:\xampp3\htdocs\roles_permisos\public\index.php(19): Bramus\Router\Router->run()
+#8 {main}
+  thrown in C:\xampp3\htdocs\roles_permisos\vendor\windwalker\edge\src\Edge.php on line 260
+[05-Oct-2024 02:39:31 Europe/Berlin] PHP Fatal error:  Uncaught ParseError: syntax error, unexpected token "endforeach", expecting "elseif" or "else" or "endif" in C:\xampp3\htdocs\roles_permisos\vendor\windwalker\edge\src\Edge.php(227) : eval()'d code:81
+Stack trace:
+#0 C:\xampp3\htdocs\roles_permisos\vendor\windwalker\edge\src\Edge.php(182): Windwalker\Edge\Edge->Windwalker\Edge\{closure}('../resources/vi...')
+#1 C:\xampp3\htdocs\roles_permisos\app\Http\lib\publicfunction.php(19): Windwalker\Edge\Edge->render('../resources/vi...', Array)
+#2 C:\xampp3\htdocs\roles_permisos\app\Http\controllers\UserController.php(149): View('users.editar', Array)
+#3 [internal function]: app\Http\controllers\UserController->editar('8')
+#4 C:\xampp3\htdocs\roles_permisos\vendor\bramus\router\src\Bramus\Router\Router.php(482): call_user_func_array(Array, Array)
+#5 C:\xampp3\htdocs\roles_permisos\vendor\bramus\router\src\Bramus\Router\Router.php(440): Bramus\Router\Router->invoke('UserController@...', Array)
+#6 C:\xampp3\htdocs\roles_permisos\vendor\bramus\router\src\Bramus\Router\Router.php(287): Bramus\Router\Router->handle(Array, true)
+#7 C:\xampp3\htdocs\roles_permisos\public\index.php(19): Bramus\Router\Router->run()
+#8 {main}
+
+Next Windwalker\Edge\Exception\EdgeException: syntax error, unexpected token "endforeach", expecting "elseif" or "else" or "endif"
+
+| View layout: ../resources/views/users/editar.blade.php (../resources/views/users/editar.blade.php) in C:\xampp3\htdocs\roles_permisos\vendor\windwalker\edge\src\Edge.php:260
+Stack trace:
+#0 C:\xampp3\htdocs\roles_permisos\vendor\windwalker\edge\src\Edge.php(185): Windwalker\Edge\Edge->wrapException(Object(ParseError), '../resources/vi...', '../resources/vi...')
+#1 C:\xampp3\htdocs\roles_permisos\app\Http\lib\publicfunction.php(19): Windwalker\Edge\Edge->render('../resources/vi...', Array)
+#2 C:\xampp3\htdocs\roles_permisos\app\Http\controllers\UserController.php(149): View('users.editar', Array)
+#3 [internal function]: app\Http\controllers\UserController->editar('8')
+#4 C:\xampp3\htdocs\roles_permisos\vendor\bramus\router\src\Bramus\Router\Router.php(482): call_user_func_array(Array, Array)
+#5 C:\xampp3\htdocs\roles_permisos\vendor\bramus\router\src\Bramus\Router\Router.php(440): Bramus\Router\Router->invoke('UserController@...', Array)
+#6 C:\xampp3\htdocs\roles_permisos\vendor\bramus\router\src\Bramus\Router\Router.php(287): Bramus\Router\Router->handle(Array, true)
+#7 C:\xampp3\htdocs\roles_permisos\public\index.php(19): Bramus\Router\Router->run()
+#8 {main}
+  thrown in C:\xampp3\htdocs\roles_permisos\vendor\windwalker\edge\src\Edge.php on line 260
+[05-Oct-2024 03:30:24 Europe/Berlin] PHP Parse error:  syntax error, unexpected token "." in C:\xampp3\htdocs\roles_permisos\app\Http\controllers\RoleController.php on line 35
+[05-Oct-2024 04:29:23 Europe/Berlin] PHP Warning:  Undefined array key 0 in C:\xampp3\htdocs\roles_permisos\vendor\windwalker\edge\src\Edge.php(227) : eval()'d code on line 12
+[05-Oct-2024 04:29:23 Europe/Berlin] PHP Warning:  Attempt to read property "id_usuario" on null in C:\xampp3\htdocs\roles_permisos\vendor\windwalker\edge\src\Edge.php(227) : eval()'d code on line 12
+[05-Oct-2024 04:29:23 Europe/Berlin] PHP Warning:  Undefined array key 0 in C:\xampp3\htdocs\roles_permisos\vendor\windwalker\edge\src\Edge.php(227) : eval()'d code on line 29
+[05-Oct-2024 04:29:23 Europe/Berlin] PHP Warning:  Attempt to read property "name" on null in C:\xampp3\htdocs\roles_permisos\vendor\windwalker\edge\src\Edge.php(227) : eval()'d code on line 29
+[05-Oct-2024 04:29:23 Europe/Berlin] PHP Warning:  Undefined array key 0 in C:\xampp3\htdocs\roles_permisos\vendor\windwalker\edge\src\Edge.php(227) : eval()'d code on line 36
+[05-Oct-2024 04:29:23 Europe/Berlin] PHP Warning:  Attempt to read property "email" on null in C:\xampp3\htdocs\roles_permisos\vendor\windwalker\edge\src\Edge.php(227) : eval()'d code on line 36
+[05-Oct-2024 04:29:23 Europe/Berlin] PHP Warning:  Undefined array key 0 in C:\xampp3\htdocs\roles_permisos\vendor\windwalker\edge\src\Edge.php(227) : eval()'d code on line 44
+[05-Oct-2024 04:29:23 Europe/Berlin] PHP Warning:  Attempt to read property "estado" on null in C:\xampp3\htdocs\roles_permisos\vendor\windwalker\edge\src\Edge.php(227) : eval()'d code on line 44
+[05-Oct-2024 04:29:23 Europe/Berlin] PHP Warning:  Undefined array key 0 in C:\xampp3\htdocs\roles_permisos\vendor\windwalker\edge\src\Edge.php(227) : eval()'d code on line 45
+[05-Oct-2024 04:29:23 Europe/Berlin] PHP Warning:  Attempt to read property "estado" on null in C:\xampp3\htdocs\roles_permisos\vendor\windwalker\edge\src\Edge.php(227) : eval()'d code on line 45

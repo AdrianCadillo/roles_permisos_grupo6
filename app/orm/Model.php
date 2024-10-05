@@ -55,6 +55,7 @@ class Model extends Conexion implements Orm
         exit;
       }finally{
         $this->closeConection();
+        $this->ValuesWhere =[];
       }
     }
 
