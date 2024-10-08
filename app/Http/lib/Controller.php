@@ -5,7 +5,7 @@ use app\models\Usuario_Role;
 
 class Controller 
 { 
-    use Request,Csrf;
+    use Request,Csrf,Fecha;
     /**
      * 
      */

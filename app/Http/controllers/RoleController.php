@@ -26,7 +26,9 @@ class RoleController extends Controller
        $json = '';
        $modelrole = new Role;$modelrolepermission = new Role_Permiso;
 
-       $roles = $modelrole->query()->get();
+       $roles = $modelrole->query()
+       ->where("deleted_at","is",null)
+       ->get();
        
         
        foreach($roles as $role)
@@ -64,5 +66,100 @@ class RoleController extends Controller
         $permisos = $modelPermiso->query()->get();
 
         json(["permisos"=>$permisos]);
+    }
+
+    /**RETORNE LOS PERMISOS QUE TIENE ASIGNADO UN ROL */
+    public function permisosDelRol($id)
+    {
+      $model_role_permiso = new Role_Permiso;
+
+      $data = $model_role_permiso->query()->Join("roles as r","rp.id_rol","=","r.id_rol")
+                                 ->Join("permisos as p","rp.id_permiso","=","p.id_permiso")
+                                 ->where("rp.id_rol","=",$id)
+                                 ->select("rp.id_permiso","p.nombre_permiso")
+                                 ->get();
+
+      json(["permisosrol" => $data]);                           
+    }
+
+    /**RETORNA LOS PERMISOS QUE AUN NO AN SIDO ASIGNADO A UN ROL */
+    public function permisos_no_asignados_al_rol($id)
+    {
+     $modelrole = new Role_Permiso;
+
+     $data = $modelrole->procedure("show_not_permisos_role","C",[$id]);
+
+     json(["response" => $data]);
+    }
+
+    /**
+     * Guardar nuevos roles
+     */
+    public function store()
+    {
+      if($this->VerifyTokenCsrf($this->post("token_"))){
+         $modelRole = new Role;
+
+         $response = $modelRole->create([
+          "nombre_rol" => $this->post("namerol")
+         ]);
+
+         json(["response" => $response ? 'ok':'error']);
+      }else{
+        json(["response" => "token-invalid"]);
+      }
+    }
+
+    /**Método para asignar permisos a los roles */
+    public function asignRolePermission()
+    {
+      if($this->VerifyTokenCsrf($this->post("token_"))){
+        $modelRolePermission = new Role_Permiso; $modelrole = new Role;
+
+        /// consultamos al rol que estamos creando
+        $rol = $modelrole->query()->where("nombre_rol","=",$this->post("namerol"))->get();
+
+        $response = $modelRolePermission->create([
+          "id_rol" => $rol[0]->id_rol,
+          "id_permiso" => $this->post("permiso")
+        ]);
+
+        json(["response" => $response ? 'ok':'error']);
+      }  
+    }
+
+    /**
+     * Guardar los cambios
+     */
+    public function update($id){
+      if($this->VerifyTokenCsrf($this->post("token_"))){
+        $modelrole = new Role;
+
+        $response = $modelrole->update([
+          "id_rol" => $id,
+          "nombre_rol" => $this->post("namerol")
+        ]);
+
+        if($response){
+          $modelrole->procedure("proc_gestion_roles_user","C",[$id,"drp"]);
+        }
+      }
+    }
+
+
+    /**
+     * Método para eliminar un rol
+     */
+    public function eliminar($id){
+      if($this->VerifyTokenCsrf($this->post("token_"))){
+        $modelrole = new Role;
+
+        $response = $modelrole->update([
+          "id_rol" => $id,
+          "deleted_at" => $this->FechaActual("Y-m-d H:i:s")
+        ]);
+
+        json(["response" => $response ? 'ok':'error']);
+      }  
     }
 }

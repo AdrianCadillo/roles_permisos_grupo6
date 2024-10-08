@@ -291,3 +291,25 @@ Stack trace:
 [05-Oct-2024 04:29:23 Europe/Berlin] PHP Warning:  Attempt to read property "estado" on null in C:\xampp3\htdocs\roles_permisos\vendor\windwalker\edge\src\Edge.php(227) : eval()'d code on line 44
 [05-Oct-2024 04:29:23 Europe/Berlin] PHP Warning:  Undefined array key 0 in C:\xampp3\htdocs\roles_permisos\vendor\windwalker\edge\src\Edge.php(227) : eval()'d code on line 45
 [05-Oct-2024 04:29:23 Europe/Berlin] PHP Warning:  Attempt to read property "estado" on null in C:\xampp3\htdocs\roles_permisos\vendor\windwalker\edge\src\Edge.php(227) : eval()'d code on line 45
+[05-Oct-2024 04:32:57 Europe/Berlin] PHP Warning:  Undefined array key 0 in C:\xampp3\htdocs\roles_permisos\vendor\windwalker\edge\src\Edge.php(227) : eval()'d code on line 12
+[05-Oct-2024 04:32:57 Europe/Berlin] PHP Warning:  Attempt to read property "id_usuario" on null in C:\xampp3\htdocs\roles_permisos\vendor\windwalker\edge\src\Edge.php(227) : eval()'d code on line 12
+[05-Oct-2024 04:32:57 Europe/Berlin] PHP Warning:  Undefined array key 0 in C:\xampp3\htdocs\roles_permisos\vendor\windwalker\edge\src\Edge.php(227) : eval()'d code on line 29
+[05-Oct-2024 04:32:57 Europe/Berlin] PHP Warning:  Attempt to read property "name" on null in C:\xampp3\htdocs\roles_permisos\vendor\windwalker\edge\src\Edge.php(227) : eval()'d code on line 29
+[05-Oct-2024 04:32:57 Europe/Berlin] PHP Warning:  Undefined array key 0 in C:\xampp3\htdocs\roles_permisos\vendor\windwalker\edge\src\Edge.php(227) : eval()'d code on line 36
+[05-Oct-2024 04:32:57 Europe/Berlin] PHP Warning:  Attempt to read property "email" on null in C:\xampp3\htdocs\roles_permisos\vendor\windwalker\edge\src\Edge.php(227) : eval()'d code on line 36
+[05-Oct-2024 04:32:57 Europe/Berlin] PHP Warning:  Undefined array key 0 in C:\xampp3\htdocs\roles_permisos\vendor\windwalker\edge\src\Edge.php(227) : eval()'d code on line 44
+[05-Oct-2024 04:32:57 Europe/Berlin] PHP Warning:  Attempt to read property "estado" on null in C:\xampp3\htdocs\roles_permisos\vendor\windwalker\edge\src\Edge.php(227) : eval()'d code on line 44
+[05-Oct-2024 04:32:57 Europe/Berlin] PHP Warning:  Undefined array key 0 in C:\xampp3\htdocs\roles_permisos\vendor\windwalker\edge\src\Edge.php(227) : eval()'d code on line 45
+[05-Oct-2024 04:32:57 Europe/Berlin] PHP Warning:  Attempt to read property "estado" on null in C:\xampp3\htdocs\roles_permisos\vendor\windwalker\edge\src\Edge.php(227) : eval()'d code on line 45
+[08-Oct-2024 03:42:22 Europe/Berlin] PHP Warning:  Undefined array key 0 in C:\xampp3\htdocs\roles_permisos\app\Http\controllers\RoleController.php on line 121
+[08-Oct-2024 03:42:22 Europe/Berlin] PHP Warning:  Attempt to read property "id_rol" on null in C:\xampp3\htdocs\roles_permisos\app\Http\controllers\RoleController.php on line 121
+[08-Oct-2024 03:42:22 Europe/Berlin] PHP Warning:  Undefined array key 0 in C:\xampp3\htdocs\roles_permisos\app\Http\controllers\RoleController.php on line 121
+[08-Oct-2024 03:42:22 Europe/Berlin] PHP Warning:  Attempt to read property "id_rol" on null in C:\xampp3\htdocs\roles_permisos\app\Http\controllers\RoleController.php on line 121
+[08-Oct-2024 03:42:22 Europe/Berlin] PHP Warning:  Undefined array key 0 in C:\xampp3\htdocs\roles_permisos\app\Http\controllers\RoleController.php on line 121
+[08-Oct-2024 03:42:22 Europe/Berlin] PHP Warning:  Attempt to read property "id_rol" on null in C:\xampp3\htdocs\roles_permisos\app\Http\controllers\RoleController.php on line 121
+[08-Oct-2024 03:42:42 Europe/Berlin] PHP Warning:  Undefined array key 0 in C:\xampp3\htdocs\roles_permisos\app\Http\controllers\RoleController.php on line 121
+[08-Oct-2024 03:42:42 Europe/Berlin] PHP Warning:  Attempt to read property "id_rol" on null in C:\xampp3\htdocs\roles_permisos\app\Http\controllers\RoleController.php on line 121
+[08-Oct-2024 03:42:42 Europe/Berlin] PHP Warning:  Undefined array key 0 in C:\xampp3\htdocs\roles_permisos\app\Http\controllers\RoleController.php on line 121
+[08-Oct-2024 03:42:42 Europe/Berlin] PHP Warning:  Attempt to read property "id_rol" on null in C:\xampp3\htdocs\roles_permisos\app\Http\controllers\RoleController.php on line 121
+[08-Oct-2024 03:43:57 Europe/Berlin] PHP Warning:  Undefined array key 0 in C:\xampp3\htdocs\roles_permisos\app\Http\controllers\RoleController.php on line 121
+[08-Oct-2024 03:43:57 Europe/Berlin] PHP Warning:  Attempt to read property "id_rol" on null in C:\xampp3\htdocs\roles_permisos\app\Http\controllers\RoleController.php on line 121

@@ -25,6 +25,18 @@ $router->get("/roles","RoleController@index");
 $router->get("/role/permisos","RoleController@mostrarrolesPermisos");
 
 $router->get("/permisos-existentes","RoleController@mostrarPermisos");
+
+$router->post("/role/save","RoleController@store");
+
+$router->post("/role/asignar/permisos","RoleController@asignRolePermission");
+
+$router->get("/role/permissions/{id}","RoleController@permisosDelRol");
+
+$router->get("/role/permisos-no-asignados/{id}","RoleController@permisos_no_asignados_al_rol");
+
+$router->post("/role/permissions/update/{id}","RoleController@update");
+
+$router->post("/role/{id}/delete","RoleController@eliminar");
  
 $router->get("/",function(){
   echo "LA PÁGINA DE INCIO";
