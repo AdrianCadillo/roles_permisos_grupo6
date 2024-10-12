@@ -16,4 +16,5 @@ require '../log/log.php';
 require '../config/app.php';
  
 require '../router/web.php';
+require '../router/auth.php';
 $router->run();

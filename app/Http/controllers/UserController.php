@@ -11,6 +11,7 @@ class UserController extends Controller
     private $Errors = [];
     public function index()
     {
+       $this->noAuth();
        /// mostrar a los usuarios
        $usuario = new Usuario;
 
@@ -25,6 +26,7 @@ class UserController extends Controller
      */
     public function create()
     {
+        $this->noAuth();
         $role = new Role;
         $Roles = $role->query()->get();
         View("users.create",compact("Roles"));
@@ -35,6 +37,7 @@ class UserController extends Controller
      */
     public function store()
     { 
+         $this->noAuth();
         if($this->VerifyTokenCsrf($this->post("token_"))){
            if(empty($this->post("name"))){
              $this->Errors [] = "Complete su nombre de usuario!";
@@ -132,6 +135,7 @@ class UserController extends Controller
      */
     public function editar($id)
     {
+        $this->noAuth();
         $usuariomodel = new Usuario; $modelrole = new Role; $usurolemodel = new Usuario_Role;
 
         $usuario = $usuariomodel->query()->where("id_usuario","=",$id)->get();

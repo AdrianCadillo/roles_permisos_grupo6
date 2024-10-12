@@ -1,4 +1,4 @@
-@extends('../resources/views/layouts/app.blade.php')
+@extends(layouts("app"))
 
 @section('title_page','usuarios')
 
@@ -12,6 +12,7 @@
              </div>
 
              <div class="card-body">
+                 
                 <a href="{{route("/user/create")}}" class="btn btn-primary mb-2">Agregar uno nuevo <i class="fas fa-plus"></i></a>
                @if ($this->existSession("success"))
                 <div class="alert alert-success">

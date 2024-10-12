@@ -13,6 +13,7 @@ class RoleController extends Controller
      */
     public function index()
     {
+        $this->noAuth();
         View("role.index");
     }
 

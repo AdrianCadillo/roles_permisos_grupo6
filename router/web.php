@@ -37,6 +37,10 @@ $router->get("/role/permisos-no-asignados/{id}","RoleController@permisos_no_asig
 $router->post("/role/permissions/update/{id}","RoleController@update");
 
 $router->post("/role/{id}/delete","RoleController@eliminar");
+
+$router->get("/permisos","PermisoController@index");
+
+$router->get("/permiso/create","PermisoController@create");
  
 $router->get("/",function(){
   echo "LA PÁGINA DE INCIO";

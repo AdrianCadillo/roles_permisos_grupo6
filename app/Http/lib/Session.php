@@ -3,6 +3,8 @@ namespace app\Http\lib;
 
 trait Session{
 
+    protected string $SessionUser = "user";
+    protected string $SessionProfile = "perfil";
     /**
      * Asignar a una variable de session un valor
      */

@@ -13,7 +13,11 @@
           <img src="{{assets("dist/img/user2-160x160.jpg")}}" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="#" class="d-block">Alexander Pierce</a>
+          @if (count($this->user()) >0)
+          <a href="#" class="d-block">{{$this->user()[0]->name}}</a>
+          @else 
+          <a href="#" class="d-block"></a>
+          @endif
         </div>
       </div>
  
@@ -36,6 +40,15 @@
               <i class="nav-icon fas fa-users"></i>
               <p>
                Roles
+              </p>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="{{route("permisos")}}" class="nav-link">
+              <i class="nav-icon fas fa-users"></i>
+              <p>
+               Permisos
               </p>
             </a>
           </li>
