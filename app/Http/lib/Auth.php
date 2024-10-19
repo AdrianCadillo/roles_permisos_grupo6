@@ -5,6 +5,8 @@ use app\models\Usuario_Role;
 
 trait Auth{
    use Session;
+
+   private string $Redirect = "home";
    
    /** Método que realiza la authenticación */
    public function attemp(array $credenciales=[],bool $remember = false)
@@ -15,6 +17,7 @@ trait Auth{
     $usuario = $modeluser->query()->Join("usuarios as u","ur.id_usuario","=","u.id_usuario")
                          ->Join("roles as r","ur.id_rol","=","r.id_rol")
                          ->where("ur.id_rol","=",$credenciales["rol"])
+                         ->And("u.estado","=","h")
                          ->And("u.name","=",$credenciales["login"])
                          ->Or("u.email","=",$credenciales["login"])
                          ->get();
@@ -26,7 +29,7 @@ trait Auth{
             /// vamos a verificar si el usuario dio recordar la sesion oh no
             $this->RememberMe($remember,$usuario[0]->id_usuario,$usuario[0]->id_rol);
             /// redirigir
-            redirect("users");
+            redirect($this->Redirect);
             exit;
         }else{
             $this->session("error","La contraseña ingresado es incorrecto!");   
@@ -35,6 +38,30 @@ trait Auth{
         $this->session("error","El perfíl seleccionado oh nombre de usuario son incrrectos!");
     }
     redirect("login");
+   }
+
+   /** Método que realiza la authenticación */
+   public function login(array $credenciales=[],bool $remember = false)
+   {
+    /// realizamos la consulta del usuarios con las credenciales
+    $modeluser = new Usuario_Role;
+    /// obtenemos al usuario
+    $usuario = $modeluser->query()->Join("usuarios as u","ur.id_usuario","=","u.id_usuario")
+                         ->Join("roles as r","ur.id_rol","=","r.id_rol")
+                         ->where("ur.id_rol","=",$credenciales["rol"])
+                         ->And("u.estado","=","h")
+                         ->And("u.name","=",$credenciales["login"])
+                         ->Or("u.email","=",$credenciales["login"])
+                         ->get();
+    /// Verficar si el usuario existe y a la ves si conciden lo que escribe el usuario 
+
+    if($usuario && ($credenciales["login"] === $usuario[0]->name || $credenciales["login"] === $usuario[0]->email)){
+        /// Verificar la constraseña que escribe el usuario
+        $this->RememberMe($remember,$usuario[0]->id_usuario,$usuario[0]->id_rol);
+        redirect($this->Redirect);
+    }else{
+      redirect("login");   
+    }
    }
 
    /// Método va realizar el proceso de recordar la sesión

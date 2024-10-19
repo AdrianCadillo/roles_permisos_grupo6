@@ -41,6 +41,18 @@ $router->post("/role/{id}/delete","RoleController@eliminar");
 $router->get("/permisos","PermisoController@index");
 
 $router->get("/permiso/create","PermisoController@create");
+
+$router->post("/permiso/save","PermisoController@store");
+
+$router->get("/user/create-account","UserController@ViewCreateAccount");
+
+$router->post("/user/create-account/save","UserController@savecreateAccount");
+
+$router->get("/user/activate/account","UserController@viewActiveAccount");
+
+$router->post("/user/activacion/account/code/{id}","UserController@ActivarCuentaUserCode");
+
+$router->get("/home","HomeController@index");
  
 $router->get("/",function(){
   echo "LA PÁGINA DE INCIO";

@@ -14,7 +14,11 @@ class RoleController extends Controller
     public function index()
     {
         $this->noAuth();
-        View("role.index");
+        if($this->can("rol.index")){
+          View("role.index");
+        }else{
+          View("pageserrors.no_authorizado"); 
+        }
     }
 
     /**

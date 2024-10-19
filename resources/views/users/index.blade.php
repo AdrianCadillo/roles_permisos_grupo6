@@ -2,19 +2,20 @@
 
 @section('title_page','usuarios')
 
-
 @section('content')
    <div class="row">
-      <div class="col-12 table-responsive">
+      <div class="col-12">
          <div class="card">
              <div class="card-header bg-primary">
                 <h5 class="text-white">Lista de usuarios</h5>
              </div>
 
              <div class="card-body">
-                 
+                @if ($this->can("usuario.create"))
                 <a href="{{route("/user/create")}}" class="btn btn-primary mb-2">Agregar uno nuevo <i class="fas fa-plus"></i></a>
-               @if ($this->existSession("success"))
+                @endif
+               
+                @if ($this->existSession("success"))
                 <div class="alert alert-success">
                    {{$this->getSession("success")}}
                 </div>
@@ -43,53 +44,60 @@
                 @php $this->destroySession("existe") @endphp
                 @endif
                
-                <table class="table table-bordered" id="usuarios" style="width: 100%">
-                    <thead>
-                        <tr>
-                            <th>#</th>
-                            <th>Nombre usuario</th>
-                            <th>Email</th>
-                            <th>Estado</th>
-                            <th>Roles</th>
-                            <th>Acciones</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        @if (isset($usuarios) && count($usuarios) > 0)
-                           @foreach ($usuarios as $index=>$user)
-                               <tr>
-                                  <td>{{$index+1}}</td>
-                                  <td>{{$user->name}}</td>
-                                  <td>{{$user->email}}</td>
-                                  <td>
-                                    @if ($user->estado === 'h')
-                                        <span class="badge bg-success">Habilitado</span>
-                                        @else 
-                                        <span class="badge bg-danger">Ihabilitado</span>
-                                    @endif
-                                  </td>
-                                  <td>
-                                    @foreach ($this->UserRoles($user->id_usuario) as $role)
-                                        <span class="badge bg-primary">{{$role->nombre_rol}}</span>
-                                    @endforeach
-                                  </td>
-                                  <td>
-                                    <div class="row">
-                                        <div class="col-auto">
-                                            <a href="{{route("user/".$user->id_usuario."/editar")}}" class="btn btn-warning btn-sm"><i class="fas fa-edit"></i></a>
+                <div class="table-responsive">
+                    <table class="table table-bordered" id="usuarios" style="width: 100%">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Nombre usuario</th>
+                                <th>Email</th>
+                                <th>Estado</th>
+                                <th>Roles</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @if (isset($usuarios) && count($usuarios) > 0)
+                               @foreach ($usuarios as $index=>$user)
+                                   <tr>
+                                      <td>{{$index+1}}</td>
+                                      <td>{{$user->name}}</td>
+                                      <td>{{$user->email}}</td>
+                                      <td>
+                                        @if ($user->estado === 'h')
+                                            <span class="badge bg-success">Habilitado</span>
+                                            @else 
+                                            <span class="badge bg-danger">Ihabilitado</span>
+                                        @endif
+                                      </td>
+                                      <td>
+                                        @foreach ($this->UserRoles($user->id_usuario) as $role)
+                                            <span class="badge bg-primary">{{$role->nombre_rol}}</span>
+                                        @endforeach
+                                      </td>
+                                      <td>
+                                        <div class="row">
+                                            @if ($this->can("usuario.editar"))
+                                            <div class="col-auto">
+                                                <a href="{{route("user/".$user->id_usuario."/editar")}}" class="btn btn-warning btn-sm"><i
+                                                        class="fas fa-edit"></i></a>
+                                            </div>
+                                            @endif
+                                            @if ($this->can("usuario.delete"))
+                                             <div class="col-auto">
+                                                <button class="btn btn-danger btn-sm" onclick="ConfirmaEliminado(`{{$user->id_usuario}}`,`{{$user->name}}`)"><i class="fas fa-trash-alt"></i></button>
+                                             </div>
+                                            @endif
                                         </div>
-                                        <div class="col-auto">
-                                           <button class="btn btn-danger btn-sm" onclick="ConfirmaEliminado(`{{$user->id_usuario}}`,`{{$user->name}}`)"><i class="fas fa-trash-alt"></i></button>
-                                        </div>
-                                    </div>
-                                  </td>
-                               </tr>
-                           @endforeach 
-                         @else 
-                           
-                        @endif
-                    </tbody>
-                  </table>
+                                      </td>
+                                   </tr>
+                               @endforeach 
+                             @else 
+                               
+                            @endif
+                        </tbody>
+                      </table>
+                </div>
              </div>
          </div>
       </div>

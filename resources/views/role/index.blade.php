@@ -5,15 +5,18 @@
 
 @section('content')
    <div class="row">
-      <div class="col-12 table-responsive">
+      <div class="col-12">
          <div class="card">
              <div class="card-header bg-primary">
                 <h5 class="text-white">Lista de roles</h5>
              </div>
 
              <div class="card-body">
+                @if ($this->can("rol.create"))
                 <button  class="btn btn-primary mb-2" id="new_role">Agregar uno nuevo <i class="fas fa-plus"></i></button>
-               @if ($this->existSession("success"))
+                @endif
+
+                @if ($this->existSession("success"))
                 <div class="alert alert-success">
                    {{$this->getSession("success")}}
                 </div>
@@ -42,6 +45,7 @@
                 @php $this->destroySession("existe") @endphp
                 @endif
                
+               <div class="table-responsive">
                 <table class="table table-bordered nowrap" id="roles" style="width: 100%">
                     <thead>
                         <tr>
@@ -54,6 +58,7 @@
                     
                     </tbody>
                   </table>
+               </div>
              </div>
          </div>
       </div>
@@ -134,8 +139,13 @@
 
 @section('js')
     <script>
+        var tienePermisoEditar = "{{$this->can('rol.editar')}}";
+        
+        var tienePermisoEliminar = "{{$this->can('rol.delete')}}";
+
         var listaUsers;
-        var ROLID;
+         
+         
         $(document).ready(function(){
             let NombreRole = $('#nombre_rol');
             let NombreRoleEditar = $('#nombre_rol_editar')
@@ -183,9 +193,9 @@
                          return span;
                     }},
                     {"data":null,render:function(){
-                        return `<button class="btn btn-warning btn-sm" id='editar'><i class="fas fa-edit"></i></button>
-                                <button class="btn btn-danger btn-sm" id='delete'><i class="fas fa-trash-alt"></i></button>
-                               `;
+                        return tienePermisoEditar ? `<button class="btn btn-warning btn-sm" id='editar'><i class="fas fa-edit"></i></button>`:''+
+                                
+                               tienePermisoEliminar ?  `<button class="btn btn-danger btn-sm" id='delete'><i class="fas fa-trash-alt"></i></button>` :'';
                     }}
 
                 ]

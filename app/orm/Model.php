@@ -136,7 +136,7 @@ class Model extends Conexion implements Orm
 
       return $this->pps->execute();
     } catch (\Throwable $th) {
-      echo "<h1>" . $th->getMessage() . "</h1>";
+       return false;
       exit;
     } finally {
       $this->closeConection();

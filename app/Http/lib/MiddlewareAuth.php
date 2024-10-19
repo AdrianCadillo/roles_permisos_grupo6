@@ -7,7 +7,7 @@ trait MiddlewareAuth{
 
     private String $RedirectNoAuthenticate = "login";
 
-    private String $RedirectAuthenticate = "users";
+    private String $RedirectAuthenticate = "home";
     use Session;
 
  /**

@@ -383,3 +383,25 @@ Stack trace:
 [12-Oct-2024 03:46:32 Europe/Berlin] PHP Warning:  Attempt to read property "nombre_rol" on null in C:\xampp3\htdocs\roles_permisos\vendor\windwalker\edge\src\Edge.php(227) : eval()'d code on line 34
 [12-Oct-2024 03:46:32 Europe/Berlin] PHP Warning:  Undefined array key "user" in C:\xampp3\htdocs\roles_permisos\app\Http\lib\MiddlewareAuth.php on line 59
 [12-Oct-2024 03:46:32 Europe/Berlin] PHP Warning:  Undefined array key "perfil" in C:\xampp3\htdocs\roles_permisos\app\Http\lib\MiddlewareAuth.php on line 60
+[15-Oct-2024 01:41:32 Europe/Berlin] PHP Warning:  Undefined array key "user" in C:\xampp3\htdocs\roles_permisos\app\Http\lib\MiddlewareAuth.php on line 59
+[15-Oct-2024 01:41:32 Europe/Berlin] PHP Warning:  Undefined array key "perfil" in C:\xampp3\htdocs\roles_permisos\app\Http\lib\MiddlewareAuth.php on line 60
+[15-Oct-2024 03:11:30 Europe/Berlin] PHP Warning:  Array to string conversion in C:\xampp3\htdocs\roles_permisos\vendor\windwalker\edge\src\Edge.php on line 310
+[15-Oct-2024 03:50:16 Europe/Berlin] PHP Parse error:  syntax error, unexpected token "public", expecting end of file in C:\xampp3\htdocs\roles_permisos\app\Http\controllers\PermisoController.php on line 29
+[19-Oct-2024 03:45:36 Europe/Berlin] PHP Warning:  Undefined array key 0 in C:\xampp3\htdocs\roles_permisos\app\Http\controllers\UserController.php on line 314
+[19-Oct-2024 03:45:36 Europe/Berlin] PHP Warning:  Attempt to read property "id_usuario" on null in C:\xampp3\htdocs\roles_permisos\app\Http\controllers\UserController.php on line 314
+[19-Oct-2024 03:45:43 Europe/Berlin] PHP Warning:  Undefined array key 0 in C:\xampp3\htdocs\roles_permisos\app\Http\controllers\UserController.php on line 314
+[19-Oct-2024 03:45:43 Europe/Berlin] PHP Warning:  Attempt to read property "id_usuario" on null in C:\xampp3\htdocs\roles_permisos\app\Http\controllers\UserController.php on line 314
+[19-Oct-2024 03:50:08 Europe/Berlin] PHP Warning:  Undefined array key "perfil" in C:\xampp3\htdocs\roles_permisos\app\Http\lib\Controller.php on line 48
+[19-Oct-2024 03:50:08 Europe/Berlin] PHP Warning:  Undefined array key "user" in C:\xampp3\htdocs\roles_permisos\app\Http\lib\MiddlewareAuth.php on line 59
+[19-Oct-2024 03:50:08 Europe/Berlin] PHP Warning:  Undefined array key "perfil" in C:\xampp3\htdocs\roles_permisos\app\Http\lib\MiddlewareAuth.php on line 60
+[19-Oct-2024 03:50:08 Europe/Berlin] PHP Warning:  Undefined array key 0 in C:\xampp3\htdocs\roles_permisos\vendor\windwalker\edge\src\Edge.php(227) : eval()'d code on line 34
+[19-Oct-2024 03:50:08 Europe/Berlin] PHP Warning:  Attempt to read property "nombre_rol" on null in C:\xampp3\htdocs\roles_permisos\vendor\windwalker\edge\src\Edge.php(227) : eval()'d code on line 34
+[19-Oct-2024 03:50:08 Europe/Berlin] PHP Warning:  Undefined array key "user" in C:\xampp3\htdocs\roles_permisos\app\Http\lib\MiddlewareAuth.php on line 59
+[19-Oct-2024 03:50:08 Europe/Berlin] PHP Warning:  Undefined array key "perfil" in C:\xampp3\htdocs\roles_permisos\app\Http\lib\MiddlewareAuth.php on line 60
+[19-Oct-2024 03:50:08 Europe/Berlin] PHP Warning:  Undefined array key "perfil" in C:\xampp3\htdocs\roles_permisos\app\Http\lib\Controller.php on line 48
+[19-Oct-2024 03:50:08 Europe/Berlin] PHP Warning:  Undefined array key "perfil" in C:\xampp3\htdocs\roles_permisos\app\Http\lib\Controller.php on line 48
+[19-Oct-2024 03:50:08 Europe/Berlin] PHP Warning:  Undefined array key "perfil" in C:\xampp3\htdocs\roles_permisos\app\Http\lib\Controller.php on line 48
+[19-Oct-2024 03:51:03 Europe/Berlin] PHP Warning:  Undefined array key "user" in C:\xampp3\htdocs\roles_permisos\app\Http\lib\MiddlewareAuth.php on line 59
+[19-Oct-2024 03:51:03 Europe/Berlin] PHP Warning:  Undefined array key "perfil" in C:\xampp3\htdocs\roles_permisos\app\Http\lib\MiddlewareAuth.php on line 60
+[19-Oct-2024 04:12:10 Europe/Berlin] PHP Warning:  Undefined array key "user" in C:\xampp3\htdocs\roles_permisos\app\Http\lib\MiddlewareAuth.php on line 59
+[19-Oct-2024 04:12:10 Europe/Berlin] PHP Warning:  Undefined array key "perfil" in C:\xampp3\htdocs\roles_permisos\app\Http\lib\MiddlewareAuth.php on line 60

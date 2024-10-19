@@ -61,3 +61,12 @@ use Windwalker\Edge\Loader\EdgeFileLoader;
      http_response_code($code);
      echo json_encode($data);
   }
+
+  /** Genera el token y el código de 6 digitos */
+  function GenerateTokenOrCode(string $caracteres = 'abcdefghijklmnopqrstuvwxyz0123456789',$Inicio=1,$Final = 2,string $tipo = 'token'){
+    if($tipo === 'token'){
+      return str_shuffle($caracteres);
+    }
+
+    return substr(str_shuffle($caracteres),$Inicio,$Final);
+  }

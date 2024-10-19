@@ -77,6 +77,9 @@
           <div class="col-4">
             <button type="submit" class="btn btn-primary btn-block">Entrar</button>
           </div>
+          <div class="col-auto mx-1">
+            <a href="{{route("user/create-account")}}">Regístrate</a>
+          </div>
           <!-- /.col -->
         </div>
       </form>

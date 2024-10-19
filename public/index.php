@@ -14,6 +14,7 @@ $dotnen->load();
 require '../app/Http/lib/publicfunction.php';
 require '../log/log.php';
 require '../config/app.php';
+require '../config/mail.php';
  
 require '../router/web.php';
 require '../router/auth.php';
