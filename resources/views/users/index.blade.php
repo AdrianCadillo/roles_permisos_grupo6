@@ -49,6 +49,7 @@
                         <thead>
                             <tr>
                                 <th>#</th>
+                                <th>Foto</th>
                                 <th>Nombre usuario</th>
                                 <th>Email</th>
                                 <th>Estado</th>
@@ -59,8 +60,18 @@
                         <tbody>
                             @if (isset($usuarios) && count($usuarios) > 0)
                                @foreach ($usuarios as $index=>$user)
+                                 @php
+                                     if($user->foto == null){
+                                        $Foto = "assets/img/anonimo.png";
+                                     }else{
+                                        $Foto = "fotos/".$user->foto;
+                                     }
+                                 @endphp
                                    <tr>
                                       <td>{{$index+1}}</td>
+                                      <td>
+                                        <img src="{{URL_BASE.$Foto}}" style="width: 75px;height: 75px;border-radius: 50%">
+                                      </td>
                                       <td>{{$user->name}}</td>
                                       <td>{{$user->email}}</td>
                                       <td>

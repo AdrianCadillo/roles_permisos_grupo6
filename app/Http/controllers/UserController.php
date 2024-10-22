@@ -3,13 +3,14 @@ namespace app\Http\controllers;
 
 use app\Http\lib\Auth;
 use app\Http\lib\Controller;
+use app\Http\lib\Upload;
 use app\models\Role;
 use app\models\Usuario;
 use app\models\Usuario_Role;
 
 class UserController extends Controller
 {
-    use Auth;
+    use Auth,Upload;
     private $Errors = [];
     public function index()
     {
@@ -19,7 +20,7 @@ class UserController extends Controller
             $usuario = new Usuario;
 
             $usuarios = $usuario->query()
-                ->select("id_usuario", "name", "email", "estado")
+                ->select("id_usuario", "name", "email", "estado","foto")
                 ->get();
             View("users.index", ["usuarios" => $usuarios]);
        }else{
@@ -90,6 +91,17 @@ class UserController extends Controller
 
             $usuario = new Usuario;
 
+            /// Vamos a consultar al usuario
+            $UserData = $usuario->query()->Where("id_usuario","=",$id)->get();
+
+            /// Comprobamos si el usuario que deseamos eliminar tiene una foto registrada
+
+            if($UserData[0]->foto != null){
+                /// obtenemos la foto
+                $FotoDelete = "fotos/".$UserData[0]->foto;
+                unlink($FotoDelete);
+            }
+
             $response = $usuario->delete($id);
 
             json(["response" => $response]);
@@ -109,33 +121,40 @@ class UserController extends Controller
         if (count($UsuarioExiste) > 0) {
             $this->session("existe", "El usuario con el correo | name que indicaste ya existe!");
         } else {
-            
-            $response = $usuario->create([
-                "name" => $this->post("name"),
-                "email" => $this->post("email"),
-                "password" => password_hash($this->post("password"), PASSWORD_BCRYPT),
-                "estado" => $this->post("estado")
-            ]);
-
-            if ($response) {
-                $usuarioRegistrado = $usuario->query()->where("email", "=", $this->post("email"))->get();
-
-                if (count($this->post("role")) > 0) {
-                    $usu_role = new Usuario_Role;
-                    foreach ($this->post("role") as $role) {
-                        $usu_role->id_usuario = $usuarioRegistrado[0]->id_usuario;
-                        $usu_role->id_rol = $role;
-
-                        $responseData = $usu_role->save();
+            $UploadFoto = $this->uploadFile("foto");
+             if($UploadFoto === 'ok' || $UploadFoto === 'vacio'){
+                $response = $usuario->create([
+                    "name" => $this->post("name"),
+                    "email" => $this->post("email"),
+                    "password" => password_hash($this->post("password"), PASSWORD_BCRYPT),
+                    "estado" => $this->post("estado"),
+                    "foto" => $this->getNameArchivo()
+                ]);
+    
+                if ($response) {
+                    $usuarioRegistrado = $usuario->query()->where("email", "=", $this->post("email"))->get();
+    
+                    if (count($this->post("role")) > 0) {
+                        $usu_role = new Usuario_Role;
+                        foreach ($this->post("role") as $role) {
+                            $usu_role->id_usuario = $usuarioRegistrado[0]->id_usuario;
+                            $usu_role->id_rol = $role;
+    
+                            $responseData = $usu_role->save();
+                        }
+    
+                        if ($responseData) {
+                            $this->session("success", "Usuario registrado correctamente!");
+                        }
                     }
-
-                    if ($responseData) {
-                        $this->session("success", "Usuario registrado correctamente!");
-                    }
+                } else {
+                    $this->session("error", "error");
                 }
-            } else {
-                $this->session("error", "error");
-            }
+             }else{
+                $this->session("error_upload","Error_upload");
+                redirect("user/create");
+                exit;
+             }
         }
     }
  
@@ -187,11 +206,24 @@ class UserController extends Controller
     {
         $modelUser = new Usuario;  
 
+        $UploadFoto = $this->uploadFile("foto");
+
+        /// consultamos al usuario
+        $usuario = $modelUser->query()->where("id_usuario","=",$id)->get();
+
+        if($UploadFoto === 'ok'){
+           if($usuario[0]->foto != null){
+            $Directorio = "fotos/".$usuario[0]->foto;
+            unlink($Directorio);
+           }
+        }
+
         $response = $modelUser->update([
             "id_usuario" => $id,
             "name" => $this->post("name"),
             "email" => $this->post("email"),
-            "estado" => $this->post("estado")
+            "estado" => $this->post("estado"),
+            "foto" => $this->getNameArchivo()
         ]);
 
         /// eliminar los roles antiguos asignados al usuairos
@@ -352,6 +384,20 @@ class UserController extends Controller
                 echo "<script>history.back()</script>";
             }
         }
+    }
+
+    /// Creamos un método para mostrar la vista de perfil del usuario
+    public function profileView(){
+
+        $this->noAuth();/// redirige al login
+        View("users.profile");
+    }
+
+    /// Mostrar la vista de editar perfíl
+    public function editarProfile(){
+        $this->noAuth();
+
+        View("users.profile_editar");
     }
 
 }

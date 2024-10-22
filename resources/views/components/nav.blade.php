@@ -18,7 +18,7 @@
         </a>
         <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
           
-          <a href="#" class="dropdown-item">
+          <a href="{{route("profile")}}" class="dropdown-item">
             <i class="fas fa-envelope mr-2"></i> Mi perfil
           </a>
           <div class="dropdown-divider"></div>

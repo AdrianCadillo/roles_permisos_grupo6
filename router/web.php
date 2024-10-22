@@ -53,6 +53,10 @@ $router->get("/user/activate/account","UserController@viewActiveAccount");
 $router->post("/user/activacion/account/code/{id}","UserController@ActivarCuentaUserCode");
 
 $router->get("/home","HomeController@index");
+
+$router->get("/profile","UserController@profileView");
+
+$router->get("/profile/editar","UserController@editarProfile");
  
 $router->get("/",function(){
   echo "LA PÁGINA DE INCIO";

@@ -10,7 +10,7 @@
            <div class="card-header">
               <h4>Crear usuarios</h4>
            </div>
-           <form action="{{route("user/store")}}" method="post">
+           <form action="{{route("user/store")}}" method="post" enctype="multipart/form-data">
             <input type="hidden" name="token_" value="{{$this->Csrf()}}">
             <div class="card-body">
               @if ($this->existSession("errors"))
@@ -22,6 +22,12 @@
                     </ul>
                  </div>
                  @php $this->destroySession("errors") @endphp
+              @endif
+              @if ($this->existSession("error_upload"))
+                 <div class="alert alert-danger">
+                     Error, al subir archvo, el tipo de archivo es incorrecto oh hubo un error con el servidor!
+                 </div>
+                 @php $this->destroySession("error_upload") @endphp
               @endif
               <div class="row">
                  <div class="col-xl-5 col-lg-5 col-md-6 col-12">
@@ -53,6 +59,14 @@
                      <option value="i">Inhabilitado</option>
                    </select>
                 </div>
+             </div>
+
+
+             <div class="col-12">
+              <div class="form-group">
+                 <label for="foto"><b>Seleccione una foto</b></label>
+                 <input type="file" name="foto" id="foto" class="form-control">
+              </div>
              </div>
 
               </div>

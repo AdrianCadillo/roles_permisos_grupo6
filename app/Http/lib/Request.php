@@ -41,4 +41,35 @@ trait Request
 
         return '';
     }
+
+    /**
+     * Mètodo para obtener el nombre del archivo
+     */
+    public function getNameFile(string $nameFile)
+    {
+         return $_FILES[$nameFile]["name"];
+    }
+
+    /**
+     * Método para obtener el tipo de archivo
+     */
+    public function getTypeFile(string $nameFile)
+    {
+        return $_FILES[$nameFile]["type"];
+    }
+
+    /**
+     * Método para obtener el tamaño del archivo
+     */
+    public function getSizeFile(string $nameFile)
+    {
+        return $_FILES[$nameFile]["size"];
+    }
+
+    /**
+     * Método para obtener el contenido del archivo
+     */
+    public function getContentFile(string $nameFile){
+        return $_FILES[$nameFile]["tmp_name"];
+    }
 }

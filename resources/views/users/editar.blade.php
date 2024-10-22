@@ -11,7 +11,7 @@
               <h4>Editar usuario</h4>
               
            </div>
-           <form action="{{route("user/".$usuario[0]->id_usuario."/update")}}" method="post">
+           <form action="{{route("user/".$usuario[0]->id_usuario."/update")}}"  method="post"  enctype="multipart/form-data">
             <input type="hidden" name="token_" value="{{$this->Csrf()}}">
             <div class="card-body">
               @if ($this->existSession("errors"))
@@ -47,6 +47,18 @@
                      <option value="i" @if($usuario[0]->estado=== 'i') selected @endif>Inhabilitado</option>
                    </select>
                 </div>
+             </div>
+             @php
+                $Foto = $usuario[0]->foto != null ? "fotos/".$usuario[0]->foto :'assets/img/anonimo.png';
+            @endphp
+             <div class="col-12 text-center mt-2 mb-1">
+                <img src="{{URL_BASE.$Foto}}" alt="" style="width: 120px;height: 120px;border-radius: 50%">
+             </div>
+             <div class="col-12">
+              <div class="form-group">
+                 <label for="foto"><b>Seleccione una foto</b></label>
+                 <input type="file" name="foto" id="foto" class="form-control">
+              </div>
              </div>
 
               </div>

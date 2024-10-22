@@ -405,3 +405,35 @@ Stack trace:
 [19-Oct-2024 03:51:03 Europe/Berlin] PHP Warning:  Undefined array key "perfil" in C:\xampp3\htdocs\roles_permisos\app\Http\lib\MiddlewareAuth.php on line 60
 [19-Oct-2024 04:12:10 Europe/Berlin] PHP Warning:  Undefined array key "user" in C:\xampp3\htdocs\roles_permisos\app\Http\lib\MiddlewareAuth.php on line 59
 [19-Oct-2024 04:12:10 Europe/Berlin] PHP Warning:  Undefined array key "perfil" in C:\xampp3\htdocs\roles_permisos\app\Http\lib\MiddlewareAuth.php on line 60
+[22-Oct-2024 02:23:36 Europe/Berlin] PHP Warning:  Undefined array key "foto" in C:\xampp3\htdocs\roles_permisos\app\Http\lib\Request.php on line 50
+[22-Oct-2024 02:23:36 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp3\htdocs\roles_permisos\app\Http\lib\Request.php on line 50
+[22-Oct-2024 03:02:43 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$foto in C:\xampp3\htdocs\roles_permisos\vendor\windwalker\edge\src\Edge.php(227) : eval()'d code on line 66
+[22-Oct-2024 03:02:43 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$foto in C:\xampp3\htdocs\roles_permisos\vendor\windwalker\edge\src\Edge.php(227) : eval()'d code on line 66
+[22-Oct-2024 03:02:43 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$foto in C:\xampp3\htdocs\roles_permisos\vendor\windwalker\edge\src\Edge.php(227) : eval()'d code on line 66
+[22-Oct-2024 03:02:43 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$foto in C:\xampp3\htdocs\roles_permisos\vendor\windwalker\edge\src\Edge.php(227) : eval()'d code on line 66
+[22-Oct-2024 03:02:43 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$foto in C:\xampp3\htdocs\roles_permisos\vendor\windwalker\edge\src\Edge.php(227) : eval()'d code on line 66
+[22-Oct-2024 03:02:43 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$foto in C:\xampp3\htdocs\roles_permisos\vendor\windwalker\edge\src\Edge.php(227) : eval()'d code on line 66
+[22-Oct-2024 03:03:05 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$foto in C:\xampp3\htdocs\roles_permisos\vendor\windwalker\edge\src\Edge.php(227) : eval()'d code on line 66
+[22-Oct-2024 03:03:05 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$foto in C:\xampp3\htdocs\roles_permisos\vendor\windwalker\edge\src\Edge.php(227) : eval()'d code on line 66
+[22-Oct-2024 03:03:05 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$foto in C:\xampp3\htdocs\roles_permisos\vendor\windwalker\edge\src\Edge.php(227) : eval()'d code on line 66
+[22-Oct-2024 03:03:05 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$foto in C:\xampp3\htdocs\roles_permisos\vendor\windwalker\edge\src\Edge.php(227) : eval()'d code on line 66
+[22-Oct-2024 03:03:05 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$foto in C:\xampp3\htdocs\roles_permisos\vendor\windwalker\edge\src\Edge.php(227) : eval()'d code on line 66
+[22-Oct-2024 03:03:05 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$foto in C:\xampp3\htdocs\roles_permisos\vendor\windwalker\edge\src\Edge.php(227) : eval()'d code on line 66
+[22-Oct-2024 03:03:43 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$foto in C:\xampp3\htdocs\roles_permisos\vendor\windwalker\edge\src\Edge.php(227) : eval()'d code on line 66
+[22-Oct-2024 03:03:43 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$foto in C:\xampp3\htdocs\roles_permisos\vendor\windwalker\edge\src\Edge.php(227) : eval()'d code on line 66
+[22-Oct-2024 03:03:43 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$foto in C:\xampp3\htdocs\roles_permisos\vendor\windwalker\edge\src\Edge.php(227) : eval()'d code on line 66
+[22-Oct-2024 03:03:43 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$foto in C:\xampp3\htdocs\roles_permisos\vendor\windwalker\edge\src\Edge.php(227) : eval()'d code on line 66
+[22-Oct-2024 03:03:43 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$foto in C:\xampp3\htdocs\roles_permisos\vendor\windwalker\edge\src\Edge.php(227) : eval()'d code on line 66
+[22-Oct-2024 03:03:43 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$foto in C:\xampp3\htdocs\roles_permisos\vendor\windwalker\edge\src\Edge.php(227) : eval()'d code on line 66
+[22-Oct-2024 03:04:38 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$foto in C:\xampp3\htdocs\roles_permisos\vendor\windwalker\edge\src\Edge.php(227) : eval()'d code on line 66
+[22-Oct-2024 03:04:38 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$foto in C:\xampp3\htdocs\roles_permisos\vendor\windwalker\edge\src\Edge.php(227) : eval()'d code on line 66
+[22-Oct-2024 03:04:38 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$foto in C:\xampp3\htdocs\roles_permisos\vendor\windwalker\edge\src\Edge.php(227) : eval()'d code on line 66
+[22-Oct-2024 03:04:38 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$foto in C:\xampp3\htdocs\roles_permisos\vendor\windwalker\edge\src\Edge.php(227) : eval()'d code on line 66
+[22-Oct-2024 03:04:38 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$foto in C:\xampp3\htdocs\roles_permisos\vendor\windwalker\edge\src\Edge.php(227) : eval()'d code on line 66
+[22-Oct-2024 03:04:38 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$foto in C:\xampp3\htdocs\roles_permisos\vendor\windwalker\edge\src\Edge.php(227) : eval()'d code on line 66
+[22-Oct-2024 03:25:29 Europe/Berlin] PHP Warning:  Undefined array key "foto" in C:\xampp3\htdocs\roles_permisos\app\Http\lib\Request.php on line 66
+[22-Oct-2024 03:25:29 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp3\htdocs\roles_permisos\app\Http\lib\Request.php on line 66
+[22-Oct-2024 03:26:03 Europe/Berlin] PHP Warning:  Undefined array key "foto" in C:\xampp3\htdocs\roles_permisos\app\Http\lib\Request.php on line 66
+[22-Oct-2024 03:26:03 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp3\htdocs\roles_permisos\app\Http\lib\Request.php on line 66
+[22-Oct-2024 03:27:20 Europe/Berlin] PHP Warning:  Undefined array key "foto" in C:\xampp3\htdocs\roles_permisos\app\Http\lib\Request.php on line 66
+[22-Oct-2024 03:27:20 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp3\htdocs\roles_permisos\app\Http\lib\Request.php on line 66
