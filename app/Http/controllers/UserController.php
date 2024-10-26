@@ -400,4 +400,90 @@ class UserController extends Controller
         View("users.profile_editar");
     }
 
+    /// Actualizar perfil del usuario
+    public function updateProfile()
+    {
+        $this->noAuth();
+
+        if($this->VerifyTokenCsrf($this->post("token_"))){
+            $modelUser = new Usuario;
+
+            $UploadFoto = $this->uploadFile("foto");
+            $usuario = $modelUser->query()->where("id_usuario","=",$this->getSession("user"))->get();
+    
+    
+            if($UploadFoto === 'ok')
+            {
+                if($usuario[0]->foto != null){
+                    $Directorio = "fotos/".$usuario[0]->foto;
+                    unlink($Directorio);
+                }
+            }
+    
+            $response = $modelUser->update([
+                "id_usuario" => $this->getSession("user"),
+                "name" => $this->post("name"),
+                "email" => $this->post("email"),
+                "foto" => $this->getNameArchivo()
+            ]);
+
+            if($response){
+                $this->session("success","Tus datos han sido modificados correcatamente!");
+            }else{
+                $this->session("error","Error al actualizar tus datos!");
+            }
+     
+        }else{
+            $this->session("error","token-invalid!");
+        }
+        redirect("profile/editar");
+    }
+
+    /**
+     * Método valida la contraseña actual
+     */
+    public function validatePasswordActual($password_actual){
+           $this->noAuth();
+
+            $modelUser = new Usuario;
+ 
+            /** Obtenemos al id de l usuario acode sea necesario */
+            if($this->existSession("user")){
+               $userId = $this->getSession("user");
+            }else{
+                $userId = openssl_decrypt($_COOKIE["user"],"aes-128-cbc","curso"); 
+            }
+
+            $usuario = $modelUser->query()->where("id_usuario","=",$userId)->get();
+            if($usuario && password_verify($password_actual,$usuario[0]->password)){
+                json(["response" => "ok"]);
+            }else{
+                json(["response" => "no"]);
+            }
+    }
+
+    /**Método para guardar la contraseña nueva del usuario */
+    public function updatePasswordUser(){
+        $this->noAuth();
+
+        if($this->VerifyTokenCsrf($this->post("token_"))){
+            $modelUser = new Usuario;
+            /** Obtenemos al id de l usuario acode sea necesario */
+            if($this->existSession("user")){
+                $userId = $this->getSession("user");
+             }else{
+                $userId = openssl_decrypt($_COOKIE["user"],"aes-128-cbc","curso"); 
+            }
+
+            $response = $modelUser->update([
+                "id_usuario" => $userId,
+                "password" => password_hash($this->post("password_nuevo"),PASSWORD_BCRYPT)
+            ]);
+
+            json(["response" => $response ? 'ok' :'error']);
+        }else{
+            json(["response" => "error-token"]);
+        }
+    }
+
 }

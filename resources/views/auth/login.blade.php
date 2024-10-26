@@ -64,6 +64,7 @@
             </div>
           </div>
         </div>
+        <a href="">Olvidaste tu contraseña?</a>
         <div class="row">
           <div class="col-8">
             <div class="icheck-primary">

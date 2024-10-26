@@ -437,3 +437,40 @@ Stack trace:
 [22-Oct-2024 03:26:03 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp3\htdocs\roles_permisos\app\Http\lib\Request.php on line 66
 [22-Oct-2024 03:27:20 Europe/Berlin] PHP Warning:  Undefined array key "foto" in C:\xampp3\htdocs\roles_permisos\app\Http\lib\Request.php on line 66
 [22-Oct-2024 03:27:20 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp3\htdocs\roles_permisos\app\Http\lib\Request.php on line 66
+[26-Oct-2024 02:08:52 Europe/Berlin] PHP Parse error:  syntax error, unexpected variable "$NameArchivo_", expecting ")" in C:\xampp3\htdocs\roles_permisos\app\Http\controllers\UserController.php on line 410
+[26-Oct-2024 02:27:13 Europe/Berlin] PHP Warning:  Undefined array key "foto" in C:\xampp3\htdocs\roles_permisos\app\Http\lib\Request.php on line 66
+[26-Oct-2024 02:27:13 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp3\htdocs\roles_permisos\app\Http\lib\Request.php on line 66
+[26-Oct-2024 02:27:13 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: count(): Argument #1 ($value) must be of type Countable|array, string given in C:\xampp3\htdocs\roles_permisos\app\Http\controllers\UserController.php:233
+Stack trace:
+#0 C:\xampp3\htdocs\roles_permisos\app\Http\controllers\UserController.php(233): count('')
+#1 C:\xampp3\htdocs\roles_permisos\app\Http\controllers\UserController.php(194): app\Http\controllers\UserController->procesoModificar('profile')
+#2 [internal function]: app\Http\controllers\UserController->update('profile')
+#3 C:\xampp3\htdocs\roles_permisos\vendor\bramus\router\src\Bramus\Router\Router.php(482): call_user_func_array(Array, Array)
+#4 C:\xampp3\htdocs\roles_permisos\vendor\bramus\router\src\Bramus\Router\Router.php(440): Bramus\Router\Router->invoke('UserController@...', Array)
+#5 C:\xampp3\htdocs\roles_permisos\vendor\bramus\router\src\Bramus\Router\Router.php(287): Bramus\Router\Router->handle(Array, true)
+#6 C:\xampp3\htdocs\roles_permisos\public\index.php(21): Bramus\Router\Router->run()
+#7 {main}
+  thrown in C:\xampp3\htdocs\roles_permisos\app\Http\controllers\UserController.php on line 233
+[26-Oct-2024 02:27:38 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: count(): Argument #1 ($value) must be of type Countable|array, string given in C:\xampp3\htdocs\roles_permisos\app\Http\controllers\UserController.php:233
+Stack trace:
+#0 C:\xampp3\htdocs\roles_permisos\app\Http\controllers\UserController.php(233): count('')
+#1 C:\xampp3\htdocs\roles_permisos\app\Http\controllers\UserController.php(194): app\Http\controllers\UserController->procesoModificar('profile')
+#2 [internal function]: app\Http\controllers\UserController->update('profile')
+#3 C:\xampp3\htdocs\roles_permisos\vendor\bramus\router\src\Bramus\Router\Router.php(482): call_user_func_array(Array, Array)
+#4 C:\xampp3\htdocs\roles_permisos\vendor\bramus\router\src\Bramus\Router\Router.php(440): Bramus\Router\Router->invoke('UserController@...', Array)
+#5 C:\xampp3\htdocs\roles_permisos\vendor\bramus\router\src\Bramus\Router\Router.php(287): Bramus\Router\Router->handle(Array, true)
+#6 C:\xampp3\htdocs\roles_permisos\public\index.php(21): Bramus\Router\Router->run()
+#7 {main}
+  thrown in C:\xampp3\htdocs\roles_permisos\app\Http\controllers\UserController.php on line 233
+[26-Oct-2024 02:28:02 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: count(): Argument #1 ($value) must be of type Countable|array, string given in C:\xampp3\htdocs\roles_permisos\app\Http\controllers\UserController.php:233
+Stack trace:
+#0 C:\xampp3\htdocs\roles_permisos\app\Http\controllers\UserController.php(233): count('')
+#1 C:\xampp3\htdocs\roles_permisos\app\Http\controllers\UserController.php(194): app\Http\controllers\UserController->procesoModificar('profile')
+#2 [internal function]: app\Http\controllers\UserController->update('profile')
+#3 C:\xampp3\htdocs\roles_permisos\vendor\bramus\router\src\Bramus\Router\Router.php(482): call_user_func_array(Array, Array)
+#4 C:\xampp3\htdocs\roles_permisos\vendor\bramus\router\src\Bramus\Router\Router.php(440): Bramus\Router\Router->invoke('UserController@...', Array)
+#5 C:\xampp3\htdocs\roles_permisos\vendor\bramus\router\src\Bramus\Router\Router.php(287): Bramus\Router\Router->handle(Array, true)
+#6 C:\xampp3\htdocs\roles_permisos\public\index.php(21): Bramus\Router\Router->run()
+#7 {main}
+  thrown in C:\xampp3\htdocs\roles_permisos\app\Http\controllers\UserController.php on line 233
+[25-Oct-2024 19:36:28 America/Lima] PHP Warning:  unlink(fotos/20241021205221.png): No such file or directory in C:\xampp3\htdocs\roles_permisos\app\Http\controllers\UserController.php on line 419

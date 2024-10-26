@@ -57,7 +57,12 @@ $router->get("/home","HomeController@index");
 $router->get("/profile","UserController@profileView");
 
 $router->get("/profile/editar","UserController@editarProfile");
+
+$router->post("/user/profile/modificar","UserController@updateProfile");
+
+$router->get("/verificar-password-actual/{password_actual}","UserController@validatePasswordActual");
  
+$router->post("/user/update/password","UserController@updatePasswordUser");
 $router->get("/",function(){
   echo "LA PÁGINA DE INCIO";
 });
