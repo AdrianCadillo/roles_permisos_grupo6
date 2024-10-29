@@ -474,3 +474,5 @@ Stack trace:
 #7 {main}
   thrown in C:\xampp3\htdocs\roles_permisos\app\Http\controllers\UserController.php on line 233
 [25-Oct-2024 19:36:28 America/Lima] PHP Warning:  unlink(fotos/20241021205221.png): No such file or directory in C:\xampp3\htdocs\roles_permisos\app\Http\controllers\UserController.php on line 419
+[29-Oct-2024 01:54:24 Europe/Berlin] PHP Warning:  Undefined array key "user" in C:\xampp3\htdocs\roles_permisos\app\Http\lib\MiddlewareAuth.php on line 59
+[29-Oct-2024 01:54:24 Europe/Berlin] PHP Warning:  Undefined array key "perfil" in C:\xampp3\htdocs\roles_permisos\app\Http\lib\MiddlewareAuth.php on line 60

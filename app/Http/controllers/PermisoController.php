@@ -31,11 +31,9 @@ class PermisoController extends Controller{
      */
     public function create(){
         $this->noAuth();
-        if($this->can("permiso.create")){
+        
             View("permission.create");
-        }else{
-            View("pageserrors.no_authorizado"); 
-        }
+         
     }
 
     /**

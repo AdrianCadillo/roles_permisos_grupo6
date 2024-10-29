@@ -62,6 +62,17 @@
             </a>
           </li>
           @endif
+
+          @if ($this->can("producto.index"))
+          <li class="nav-item">
+            <a href="{{route("productos")}}" class="nav-link">
+              <i class="nav-icon fas fa-users"></i>
+              <p>
+               Productos
+              </p>
+            </a>
+          </li>
+          @endif
         </ul>
       </nav>
       <!-- /.sidebar-menu -->

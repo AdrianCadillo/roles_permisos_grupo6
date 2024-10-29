@@ -15,9 +15,9 @@ trait DatabaseConection
    public function getConectionDatabase(){
      try {
          $this->conection = new PDO(
-            "mysql:host=localhost;dbname=roles_permisos",
-            "root",
-            ""
+            "mysql:host=".HOST_MYSQL.";dbname=".DBNAME_MYSQL,
+            USER_MYSQL,
+            PASSWORD_MYSQL
          );
 
          $this->conection->exec("set names utf8");
